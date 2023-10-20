@@ -1,6 +1,8 @@
 ---
 import Home from '../components/LandingPage/Home.astro'
 import About from '../components/LandingPage/About.astro'
+
+const environment = process.env.NODE_ENV
 ---
 
 <html lang="en">
@@ -12,6 +14,7 @@ import About from '../components/LandingPage/About.astro'
 		<title>Neogaleno</title>
 	</head>
 	<body>
+		{ environment }
 		<Home />
 		<About />
 	</body>
