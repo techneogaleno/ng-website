@@ -1,0 +1,40 @@
+.primary-btn {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background: #FFB26D;
+  color: #ffffff;
+  padding: 1rem 2.2rem;
+  border-radius: 8px;
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+}
+
+.secondary-btn {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background: #ffe6d0;
+  color: #FFB26D;
+  padding: 1rem 2.2rem;
+  border-radius: 8px;
+}
+
+
+.secondary-btn:disabled {
+  opacity: 0.5;
+}
+
+.white-btn {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  background: #FFFFFF;
+  padding: 1rem 2.2rem;
+  border-radius: 8px;
+}

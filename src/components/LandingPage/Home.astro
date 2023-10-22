@@ -1,4 +1,148 @@
 ---
 ---
 
-<h1>Neogaleno - Home</h1>
+<div class="wp-home">
+  <div class="bg-home">
+    <div class="blocks grid grid-home">
+      <div class="block-1 col-span-1">
+        <img src="/webpage/wp-logo.svg" class="logo" />
+        <p class="title">Tu tiempo es para tus pacientes</p>
+        <p class="content">
+          En Neogaleno creemos que tu valioso tiempo debe ser para brindarle
+          la mejor atención a tus pacientes.
+        </p>
+        <a
+          href="/demo/booking"
+          class="btn white-btn"
+        >
+          Probar demo
+        </a>
+        <a
+          href="/demo/booking"
+          class="mr-20 btn primary-btn"
+        >
+          Crea cuenta ¡gratis!
+        </a>
+      </div>
+      <div class="col-span-1">
+        <img src="/webpage/wp-desktop.svg" class="desktop" />
+      </div>
+    </div>
+  </div>
+  <img src="/webpage/wp-home.svg" />
+</div>
+
+<style>
+.bg-home {
+  background : #009BA9;
+  height: 60rem;
+  position: relative;
+  z-index: 99999;
+}
+
+.logo {
+  width: 44rem;
+}
+
+.grid-home {
+  @apply grid-cols-2;
+}
+
+.blocks {
+  padding-top: 3rem;
+  width: 100%;
+}
+
+.block-1 {
+  padding-left: 6.7rem;
+}
+
+.title {
+  color: #ffffff;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.2rem;
+  line-height: 3.8rem;
+  margin-top: 7.6rem;
+  padding-left: 1rem;
+}
+
+.content {
+  color: #ffffff;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding-left: 1rem;
+  width: 55rem;
+}
+
+.desktop {
+  position: relative;
+  right: -5rem;
+  top: -2rem;
+  width: 105rem;
+}
+
+.btn {
+  font-size: 2rem !important;
+  font-weight: 400;
+  padding: 1.5rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1680px) {
+  .bg-home {
+    background : #009BA9;
+    height: 48rem;
+    position: relative;
+    z-index: 99999;
+  }
+
+  .desktop {
+    position: relative;
+    right: 0;
+    top: -2rem;
+    width: 105rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1281px) {
+  .bg-home {
+    background : #009BA9;
+    height: 48rem;
+    position: relative;
+    z-index: 99999;
+  }
+
+  .desktop {
+    position: relative;
+    right: 0;
+    top: -2rem;
+    width: 105rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .bg-home {
+    background : #009BA9;
+    height: 48rem;
+    position: relative;
+    z-index: 99999;
+  }
+
+  .desktop {
+    position: relative;
+    right: 0;
+    top: -2rem;
+    width: 105rem;
+  }
+}
+</style>

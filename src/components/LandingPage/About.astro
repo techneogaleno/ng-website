@@ -1,5 +1,189 @@
 ---
 ---
 
-<hr />
-<h1>Neoogaleno - About us</h1>
+<div id="about" class="wp-about">
+  <div class="wp-title">¿Por qué Neogaleno?</div>
+  <div class="grid grid-cols-10">
+    <div class="col-span-4">
+      <div class="item">
+        <div class="grid grid-cols-10">
+          <div class="col-span-2">
+            <div class="flex justify-center">
+              <div class="cicle">
+                <img src="/webpage/wp-about-1.svg" />
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="line-1"></div>
+            </div>
+          </div>
+          <div class="col-span-8">
+            <div class="title">Tu tiempo es importante</div>
+            <p class="text">
+              Creemos que tu tiempo debe ser para brindar la mejor atención a
+              tus pacientes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="grid grid-cols-10">
+          <div class="col-span-2">
+            <div class="flex justify-center">
+              <div class="cicle">
+                <img src="/webpage/wp-about-2.svg" />
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="line-2"></div>
+            </div>
+          </div>
+          <div class="col-span-8">
+            <div class="title">Producto construido para ti</div>
+            <p class="text">
+              Creamos productos fáciles de utilizar, con diseños amigables y
+              con las funcionalidades que realmente necesitas
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="grid grid-cols-10">
+          <div class="col-span-2">
+            <div class="flex justify-center">
+              <div class="cicle">
+                <img src="/webpage/wp-about-3.svg" />
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="line-3"></div>
+            </div>
+          </div>
+          <div class="col-span-8">
+            <div class="title">Software en la nube</div>
+            <div class="text">
+              Podrás administar:
+              <li>Expedientes médicos de tus pacientes</li>
+              <li>Generar recetas y estudios de laboratorio</li>
+              <li>Controlar cuentas</li>
+              ¡Toda tu información en tiempo real!
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/demo/booking" class="mt-10 white-btn">
+        Solicitar Demo
+      </a>
+      <a href="/demo/booking" class="primary-btn">
+        Solicitar Demo
+      </a>
+    </div>
+    <div class="col-span-6">
+      <video class="video" style="border-radius: 2rem" controls>
+        <source src="/webpage/about.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<style>
+.wp-about {
+  padding: 10rem;
+}
+
+.item {
+  padding-right: 5rem;
+}
+
+.cicle {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  background: #EFF7F8;
+  border-radius: 50%;
+  height: 4.6rem;
+  width: 4.6rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.cicle img {
+  height: 3.6rem;
+  width: 3.6rem;
+}
+
+.line-1 {
+  background: #009BA9;
+  height: 10rem;
+  width: .4rem;
+  margin-bottom: 2rem;
+}
+
+.line-2 {
+  background: #009BA9;
+  height: 10rem;
+  width: .4rem;
+  margin-bottom: 2rem;
+}
+
+.line-3 {
+  background: #009BA9;
+  height: 13rem;
+  width: .4rem;
+  margin-bottom: 4rem;
+}
+
+.item .title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 2.9rem;
+  color: #003236;
+  margin-bottom: 2rem;
+}
+
+.item .text {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #000000;
+  width: 70%;
+  line-height: 1.6;
+}
+
+.primary-btn {
+  font-size: 2rem !important;
+  font-weight: 400;
+  padding: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-left: 1rem;
+  border: 1px solid #FFB26D;
+}
+
+.white-btn {
+  font-size: 2rem !important;
+  font-weight: 400;
+  padding: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-left: 5rem;
+  border: 1px solid #FFB26D;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+}
+
+/* @media only screen and (min-width: 1200px) and (max-width: 1281px) {
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+} */
+</style>

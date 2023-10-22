@@ -1,0 +1,390 @@
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 9px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  color: #003236;
+}
+
+@media only screen and (min-width: 1758px) {
+  html {
+    padding: 0;
+    margin: 0;
+    font-size: 8.5px;
+  }
+}
+
+@media only screen and (min-width: 1570px) and (max-width: 1758px) {
+  html {
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1570px) {
+  html {
+    padding: 0;
+    margin: 0;
+    font-size: 7.5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1281px) {
+  html {
+    padding: 0;
+    margin: 0;
+    font-size: 7px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  html {
+    padding: 0;
+    margin: 0;
+    font-size: 6px;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+.wp-title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.2rem;
+  line-height: 3.8rem;
+  color: #003236;
+  text-align: center;
+  margin-bottom: 6.5rem;
+}
+
+.wp-features {
+  padding: 10rem;
+  padding-top: 5rem;
+}
+
+.wp-features .grid-features {
+  @apply grid-cols-4;;
+}
+
+.wp-features .feature-container {
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.16);
+  width: 100%;
+  border-radius: 1.7rem;
+  padding: 1.8rem;
+  padding-top: 3.6rem;
+  padding-bottom: 5.7rem;
+}
+
+.wp-features .item {
+  padding: 1.5rem;
+}
+
+.wp-features .feature-icon {
+  width: 7rem;
+}
+
+.wp-features .container {
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.16);
+  width: 100%;
+  height: 23rem;
+  border-radius: 1.7rem;
+  padding: 3.4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.wp-features .item .title {
+  @apply flex;
+  @apply items-center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #003236;
+  margin-left: 1rem;
+}
+
+.wp-features .item .text {
+  @apply flex;
+  @apply items-center;
+  font-family: 'Rubik';
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #003236;
+  margin-top: 1rem;
+}
+
+.wp-pricing {
+  padding: 10rem;
+  padding-top: 5rem;
+}
+
+.wp-pricing .grid-pricing {
+  @apply grid-cols-3;
+}
+
+.wp-pricing .pricing-container {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.wp-pricing .item {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.wp-pricing .pricing-box {
+  background: #FFFFFF;
+  box-shadow: 0px 20px 34px rgba(0, 0, 0, 0.17);
+  border-radius: 28px;
+  height: 60rem;
+}
+
+.wp-pricing .pricing-infinite {
+  width: 4rem;
+  margin-left: auto;
+}
+
+.wp-pricing .pricing-box .header {
+  background: #009BA9;
+  border-radius: 2.8rem 2.8rem 0 0;
+  height: 90px;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.wp-pricing .pricing-box .plan {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 2.9rem;
+  color: #FFFFFF;
+}
+
+.wp-pricing .pricing-box .price {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.wp-pricing .pricing-box .price .amount {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  background: #ffffff;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  text-align: right;
+  color: #009BA9;
+  border-radius: .4rem;
+  padding: .5rem;
+  margin-top: -.5rem;
+  margin-bottom: .5rem;
+}
+
+.wp-pricing .pricing-box .body {
+  padding-top: 3rem;
+  /* padding-bottom: 3rem; */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #003236;
+}
+
+.wp-pricing .pricing-box .item {
+  margin-bottom: 3rem;
+  padding-right: 1rem;
+}
+
+.wp-pricing .pricing-box .quantity {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  color: #003236;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.wp-pricing .pricing-box .button {
+  @apply flex;
+  @apply justify-center;
+  margin-top: 1rem;
+}
+
+.wp-pricing .pricing-box .primary-btn {
+  padding: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  font-size: 1.6rem;
+}
+
+.wp-pricing .message {
+  padding: 1rem;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #ABB4BD;
+}
+
+.wp-contact {
+  background: #009BA9;
+  height: 72.2rem;
+}
+
+.wp-contact .map {
+  position: absolute;
+  right: 0;
+  height: 69.2rem;
+}
+
+.wp-contact .title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.2rem;
+  line-height: 3.8rem;
+  letter-spacing: .1rem;
+  color: #FFFBF7;
+}
+
+.wp-contact .contact-container {
+  padding-top: 9.8rem;
+  padding-left: 10.4rem;
+}
+
+
+.wp-contact .items {
+  margin-top: 10rem;
+  width: 70%;
+  z-index: 9;
+}
+
+.wp-contact .item {
+  background: #ffffff;
+  border-radius: 2rem;
+  width: 32.8rem;
+  height: 18rem;
+  margin-bottom: 6rem;
+}
+
+.wp-contact .flags {
+  @apply flex;
+  @apply justify-center;
+  padding: 2rem;
+}
+
+.wp-contact .flags img {
+  border-radius: 1rem;
+  width: 9rem;
+}
+
+.wp-contact .info {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #009BA9;
+  margin-bottom: .5rem;
+}
+
+.wp-contact .info-2 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #003236;
+  margin-bottom: .5rem;
+  padding: 2rem;
+}
+
+.wp-contact .link {
+  text-decoration-line: underline;
+}
+
+.wp-contact .icon {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  width: 2rem;
+  margin-left: 3rem;
+}
+
+.wp-contact .grid-contact {
+  @apply grid-cols-3;
+}
+
+.wp-footer {
+  background: #ffffff;
+  padding: 3rem;
+  padding-top: 4rem;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  text-align: center;
+  color: #009BA9;
+}
+
+.wp-footer .left {
+  text-align: left;
+}
+
+.wp-footer .right {
+  text-align: right;
+}
+
+.wp-footer img {
+  float: right;
+  position: relative;
+  left: -21rem;
+  width: 3rem;
+}
+
+.more-btn {
+  background: #FFFFFF;
+  box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 16%);
+  width: 100%;
+  border-radius: 1.7rem;
+  padding: 2.4rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  color: #009BA9;
+}
