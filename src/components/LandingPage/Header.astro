@@ -1,4 +1,5 @@
 ---
+const appUser: string = import.meta.env.APP_URL;
 ---
 
 <nav class="wp-header flex items-center justify-between flex-wrap p-6">
@@ -44,10 +45,10 @@
       >
         Contacto
       </a>
-      <a href="/users/sign_in" class="mr-10 white-btn">
+      <a href={ appUser + "/demo/booking"} class="mr-10 white-btn">
         Ver Demo
       </a>
-      <a href="/users/sign_in" class="mr-20 primary-btn">
+      <a href={ appUser + "/users/sign_in" } class="mr-20 primary-btn">
         Login
       </a>
     </div>

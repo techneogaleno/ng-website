@@ -1,4 +1,5 @@
 ---
+const appUser: string = import.meta.env.APP_URL;
 ---
 
 <div class="wp-home">
@@ -12,13 +13,13 @@
           la mejor atención a tus pacientes.
         </p>
         <a
-          href="/demo/booking"
+          href={ appUser + "/demo/booking" }
           class="btn white-btn"
         >
           Probar demo
         </a>
         <a
-          href="/demo/booking"
+          href={ appUser + "/users/sign_up" }
           class="mr-20 btn primary-btn"
         >
           Crea cuenta ¡gratis!
