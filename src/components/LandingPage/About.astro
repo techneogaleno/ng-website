@@ -64,9 +64,11 @@ const appUser: string = import.meta.env.APP_URL;
             <div class="title">Software en la nube</div>
             <div class="text">
               Podrás administar:
-              <li>Expedientes médicos de tus pacientes</li>
-              <li>Generar recetas y estudios de laboratorio</li>
-              <li>Controlar cuentas</li>
+              <ul>
+                <li>Expedientes médicos de tus pacientes</li>
+                <li>Generar recetas y estudios de laboratorio</li>
+                <li>Controlar cuentas</li>
+              </ul>
               ¡Toda tu información en tiempo real!
             </div>
           </div>
@@ -97,6 +99,11 @@ const appUser: string = import.meta.env.APP_URL;
 
 .item {
   padding-right: 5rem;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 2rem;
 }
 
 .cicle {
