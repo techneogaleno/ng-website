@@ -2,7 +2,7 @@
 const appUser: string = import.meta.env.APP_URL;
 ---
 
-<nav class="wp-header flex items-center justify-between flex-wrap p-6">
+<nav class="wp-header flex items-center justify-between flex-wrap p-6 ph:hidden">
   <div class="flex items-center flex-shrink-0 text-white mr-6"></div>
   <div class="w-full block flex-grow sm:flex sm:justify-center lg:flex lg:items-center lg:w-auto sm:flex sm:items-center sm:w-auto">
     <div class="text-sm lg:flex-grow"></div>
@@ -31,10 +31,10 @@ const appUser: string = import.meta.env.APP_URL;
       >
         Contacto
       </a>
-      <a href={ appUser + "/demo/booking"} class="mr-10 white-btn">
+      <a href={ appUser + "/demo/booking" } class="mr-10 white-btn">
         Ver Demo
       </a>
-      <a href={ appUser + "/users/sign_in" } class="mr-20 primary-btn sm:hidden lg:inline xl:inline">
+      <a href={ appUser + "/users/sign_in" } class="login-btn mr-20 primary-btn sm:hidden lg:inline xl:inline">
         Login
       </a>
     </div>
@@ -66,5 +66,10 @@ const appUser: string = import.meta.env.APP_URL;
   padding: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+@media only screen and (max-width: 639px) {
+  .wp-header {
+    display: none;
+  }
 }
 </style>

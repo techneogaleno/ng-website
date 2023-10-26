@@ -5,7 +5,7 @@ const appUser: string = import.meta.env.APP_URL;
 <div class="wp-home">
   <div class="bg-home">
     <div class="blocks grid grid-home">
-      <div class="block-1 xl:col-span-1 lg:col-span-1 md:col-span-2">
+      <div class="block-1 xl:col-span-1 lg:col-span-1 md:col-span-2 sm:col-span-2">
         <img src="/webpage/wp-logo.svg" class="logo" alt="Logo de neogaleno" />
         <p class="title">Tu tiempo es para tus pacientes</p>
         <p class="content">
@@ -27,7 +27,7 @@ const appUser: string = import.meta.env.APP_URL;
           </a>
         </div>
         <div class="sm:inline-flex lg:hidden xl:hidden">
-          <img class="home-screen" src="/webpage/ng-screen.png" />
+          <img class="home-screen" src="/webpage/ng-screen.png" alt="Un screenshot de la aplicacion de neogaleno" />
         </div>
       </div>
       <div class="col-span-1">
@@ -35,7 +35,7 @@ const appUser: string = import.meta.env.APP_URL;
       </div>
     </div>
   </div>
-  <img src="/webpage/wp-home.svg" class="sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
+  <img src="/webpage/wp-home.svg" class="decoration sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
 </div>
 
 <style>
@@ -227,6 +227,286 @@ const appUser: string = import.meta.env.APP_URL;
     margin-right: auto;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
     border-radius: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .bg-home {
+    background : #009BA9;
+    height: 90rem;
+    position: relative;
+    z-index: 99999;
+    overflow: hidden;
+  }
+  .block-1 {
+    padding-left: 0;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .content {
+    font-size: 3rem;
+    text-align: center;
+    width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-screen {
+    position: relative;
+    top: 5rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 661px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .content {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .desktop {
+    display: none;
+  }
+
+  .decoration {
+    display: none;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .content {
+    font-size: 2.8rem;
+  }
+
+  .grid-home {
+    grid-template-columns: none;
+  }
+}
+
+@media only screen and (max-width: 606px) {
+  .bg-home {
+    height: 85rem;
+  }
+}
+
+@media only screen and (max-width: 562px) {
+  .title {
+    font-size: 3.2rem;
+  }
+
+  .content {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 519px) {
+  .bg-home {
+    height: 82rem;
+  }
+
+  .title {
+    font-size: 3.4rem;
+  }
+
+  .content {
+    font-size: 2.8rem;
+  }
+
+  .logo {
+    width: 38rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .bg-home {
+    padding-left: 2rem;
+    padding-right: 5rem;
+  }
+
+  .logo {
+    width: 38rem;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: left;
+  }
+
+  .home-screen {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 477px) {
+  .bg-home {
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+
+  .block-1 {
+    width: 98%;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    width: 95%;
+  }
+
+  .content {
+    font-size: 2.8rem;
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 3.2rem;
+    width: 100%;
+  }
+
+  .content {
+    font-size: 2.8rem;
+    width: 100%;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    padding: 2.5rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .bg-home {
+    padding-left: 1rem;
+    padding-right: 2rem;
+    overflow: hidden;
+    height: 90rem;
+  }
+
+  .block-1 {
+    width: 98%;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .content {
+    font-size: 2.8rem;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-screen {
+    position: relative;
+    top: 5rem;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
+  }
+
+  .btn {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bg-home {
+    height: 85rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
+  }
+
+  .btn {
+    font-size: 2.5rem !important;
+  }
+
+  .home-screen {
+    width: 100%;
+  }
+
+  .block-1 {
+    width: 100%;
+  }
+
+  .logo {
+    width: 30rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .content {
+    font-size: 2.5rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .bg-home {
+    height: 92rem;
+    padding-left: 1rem;
+    padding-right: 1.5em;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .content {
+    font-size: 2.5rem;
   }
 }
 </style>
