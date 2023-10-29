@@ -32,10 +32,16 @@ const appUser: string = import.meta.env.APP_URL;
       </div>
       <div class="col-span-1">
         <img src="/webpage/wp-desktop.svg" class="desktop sm:hidden lg:inline-flex xl:inline-flex" alt="Un screenshot de la aplicacion de neogaleno" />
+        <div class="certificate">
+          <div>Cumplimos con las NOMs de COFEPRIS</div>
+        </div>
       </div>
     </div>
   </div>
   <img src="/webpage/wp-home.svg" class="decoration sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
+</div>
+<div class="certificate-sm">
+  <div class="">Cumplimos con las NOMs de COFEPRIS</div>
 </div>
 
 <style>
@@ -104,12 +110,40 @@ const appUser: string = import.meta.env.APP_URL;
   margin-left: 1rem;
 }
 
+.certificate {
+  padding: 1rem;
+  font-family: Rubik;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  top: -5rem;
+}
+
+.certificate-sm {
+  display: none;
+}
+
 @media only screen and (min-width: 1758px) {
   .desktop {
     position: relative;
     right: 0;
     top: -2rem;
     width: 115rem;
+  }
+
+  .certificate {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1757px) {
+  .certificate {
+    font-size: 3rem;
+    line-height: 0;
+    position: relative;
+    top: -3rem;
   }
 }
 
@@ -126,6 +160,31 @@ const appUser: string = import.meta.env.APP_URL;
     right: 0;
     top: -2rem;
     width: 105rem;
+  }
+
+  .certificate {
+    font-size: 3rem;
+    line-height: 0;
+    position: relative;
+    top: -4rem;
+  }
+}
+
+@media only screen and (max-width: 1628px) {
+  .certificate {
+    font-size: 3rem;
+    line-height: 0;
+    position: relative;
+    top: -4rem;
+  }
+}
+
+@media only screen and (max-width: 1518) {
+  .certificate {
+    font-size: 3rem;
+    line-height: 0;
+    position: relative;
+    top: -4rem;
   }
 }
 
@@ -159,6 +218,13 @@ const appUser: string = import.meta.env.APP_URL;
     top: -2rem;
     width: 105rem;
   }
+
+  .certificate {
+    font-size: 2.5rem;
+    line-height: 0;
+    position: relative;
+    top: -2rem;
+  }
 }
 
 @media only screen and (min-width: 855px) and (max-width: 1024px) {
@@ -186,7 +252,7 @@ const appUser: string = import.meta.env.APP_URL;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1020px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .bg-home {
     height: 90rem;
     overflow: hidden;
@@ -227,6 +293,18 @@ const appUser: string = import.meta.env.APP_URL;
     margin-right: auto;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
     border-radius: 1.5rem;
+  }
+  .certificate {
+    display: none;
+  }
+
+  .certificate-sm {
+    display: block;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 4rem;
   }
 }
 
@@ -274,6 +352,19 @@ const appUser: string = import.meta.env.APP_URL;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
     border-radius: 1.5rem;
   }
+
+  .certificate {
+    display: none;
+  }
+
+  .certificate-sm {
+    display: block;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 4rem;
+  }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 661px) {
@@ -283,6 +374,10 @@ const appUser: string = import.meta.env.APP_URL;
 
   .content {
     font-size: 2.8rem;
+  }
+
+  .certificate {
+    display: none;
   }
 }
 
@@ -306,6 +401,10 @@ const appUser: string = import.meta.env.APP_URL;
   .grid-home {
     grid-template-columns: none;
   }
+
+  .certificate {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 606px) {
@@ -321,6 +420,10 @@ const appUser: string = import.meta.env.APP_URL;
 
   .content {
     font-size: 2.8rem;
+  }
+
+  .certificate {
+    display: none;
   }
 }
 
@@ -339,6 +442,10 @@ const appUser: string = import.meta.env.APP_URL;
 
   .logo {
     width: 38rem;
+  }
+
+  .certificate {
+    display: none;
   }
 }
 
@@ -368,6 +475,10 @@ const appUser: string = import.meta.env.APP_URL;
   .home-screen {
     width: 100%;
   }
+
+  .certificate {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 477px) {
@@ -389,6 +500,10 @@ const appUser: string = import.meta.env.APP_URL;
     font-size: 2.8rem;
     width: 98%;
   }
+
+  .certificate {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -408,6 +523,10 @@ const appUser: string = import.meta.env.APP_URL;
     margin-right: 0;
     padding: 2.5rem;
     text-align: center;
+  }
+
+  .certificate {
+    display: none;
   }
 }
 
@@ -455,6 +574,19 @@ const appUser: string = import.meta.env.APP_URL;
   .btn {
     font-size: 2.8rem !important;
   }
+
+  .certificate {
+    display: none;
+  }
+
+  .certificate-sm {
+    display: block;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 4rem;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -492,6 +624,10 @@ const appUser: string = import.meta.env.APP_URL;
     margin-right: auto;
     text-align: center;
   }
+
+  .certificate {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 321px) {
@@ -507,6 +643,19 @@ const appUser: string = import.meta.env.APP_URL;
 
   .content {
     font-size: 2.5rem;
+  }
+
+  .certificate {
+    display: none;
+  }
+
+  .certificate-sm {
+    display: block;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2rem;
   }
 }
 </style>
