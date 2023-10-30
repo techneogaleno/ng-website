@@ -1,4 +1,6 @@
 ---
+import ScreenCarousel from '../ui/carousel/ScreenCarousel.astro';
+
 const appUser: string = import.meta.env.APP_URL;
 ---
 
@@ -31,18 +33,23 @@ const appUser: string = import.meta.env.APP_URL;
         </div>
       </div>
       <div class="col-span-1">
-        <img src="/webpage/wp-desktop.svg" class="desktop sm:hidden lg:inline-flex xl:inline-flex" alt="Un screenshot de la aplicacion de neogaleno" />
-        <div class="certificate">
-          <div>Cumplimos con las NOMs de COFEPRIS</div>
+        <!-- <img src="/webpage/wp-desktop.svg" class="desktop sm:hidden lg:inline-flex xl:inline-flex" alt="Un screenshot de la aplicacion de neogaleno" /> -->
+        <div class="desktop sm:hidden lg:inline-flex xl:inline-flex">
+          <ScreenCarousel />
         </div>
       </div>
     </div>
   </div>
   <img src="/webpage/wp-home.svg" class="decoration sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
 </div>
+
+<div class="certificate">
+  <div>Cumplimos con las NOMs de COFEPRIS</div>
+</div>
 <div class="certificate-sm">
   <div class="">Cumplimos con las NOMs de COFEPRIS</div>
 </div>
+
 
 <style>
 .bg-home {
@@ -94,10 +101,13 @@ const appUser: string = import.meta.env.APP_URL;
 }
 
 .desktop {
-  position: relative;
-  right: -5rem;
-  top: -2rem;
-  width: 105rem;
+  position: absolute;
+  top: 2rem;
+  width: 100rem;
+  height: 80rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem 0 0 1.5rem;
+  overflow: hidden;
 }
 
 .btn {
@@ -118,7 +128,9 @@ const appUser: string = import.meta.env.APP_URL;
   font-weight: 500;
   text-align: center;
   position: relative;
-  top: -5rem;
+  top: 2rem;
+  text-align: right;
+  width: 90%;
 }
 
 .certificate-sm {
@@ -127,13 +139,13 @@ const appUser: string = import.meta.env.APP_URL;
 
 @media only screen and (min-width: 1758px) {
   .desktop {
-    position: relative;
-    right: 0;
-    top: -2rem;
-    width: 115rem;
+    right: 0px;
+    top: 4rem;
+    width: 100rem;
   }
 
   .certificate {
+    top: -4rem;
     font-size: 3rem;
   }
 }
@@ -143,11 +155,11 @@ const appUser: string = import.meta.env.APP_URL;
     font-size: 3rem;
     line-height: 0;
     position: relative;
-    top: -3rem;
+    top: 0rem;
   }
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1680px) {
+@media only screen and (min-width: 1281px) and (max-width: 1679px) {
   .bg-home {
     background : #009BA9;
     height: 48rem;
@@ -156,26 +168,25 @@ const appUser: string = import.meta.env.APP_URL;
   }
 
   .desktop {
-    position: relative;
     right: 0;
-    top: -2rem;
-    width: 105rem;
+    top: 2rem;
   }
 
   .certificate {
     font-size: 3rem;
     line-height: 0;
     position: relative;
-    top: -4rem;
+    top: 4rem;
   }
 }
 
 @media only screen and (max-width: 1628px) {
   .certificate {
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 0;
     position: relative;
-    top: -4rem;
+    top: 3rem;
+    right: 0rem;
   }
 }
 
@@ -197,10 +208,16 @@ const appUser: string = import.meta.env.APP_URL;
   }
 
   .desktop {
-    position: relative;
     right: 0;
-    top: -2rem;
-    width: 105rem;
+    top: 2rem;
+    width: 90rem;
+  }
+
+  .certificate {
+    font-size: 2.8rem;
+    line-height: 0;
+    position: relative;
+    top: 4rem;
   }
 }
 
@@ -213,17 +230,26 @@ const appUser: string = import.meta.env.APP_URL;
   }
 
   .desktop {
-    position: relative;
     right: 0;
-    top: -2rem;
+    top: 2rem;
     width: 105rem;
+    height: 85rem;
   }
 
   .certificate {
     font-size: 2.5rem;
     line-height: 0;
     position: relative;
-    top: -2rem;
+    top: 9rem;
+  }
+}
+
+@media only screen (max-width: 1114px) {
+  .certificate {
+    font-size: 2.5rem;
+    line-height: 0;
+    position: relative;
+    top: 9rem;
   }
 }
 
@@ -233,10 +259,10 @@ const appUser: string = import.meta.env.APP_URL;
   }
 
   .desktop {
-    position: relative;
     right: 0;
-    top: -2rem;
-    width: 105rem;
+    top: 2rem;
+    width: 80rem;
+    height: 65rem;
   }
 
   .logo {
@@ -249,6 +275,12 @@ const appUser: string = import.meta.env.APP_URL;
 
   .content {
     font-size: 2.7rem;
+  }
+  .certificate {
+    font-size: 2.5rem;
+    line-height: 0;
+    position: relative;
+    top: 5rem;
   }
 }
 
