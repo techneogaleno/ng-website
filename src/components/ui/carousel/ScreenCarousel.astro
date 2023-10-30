@@ -1,0 +1,70 @@
+---
+---
+<section class="splide" aria-label="Splide Basic HTML Example">
+  <div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide">
+        <div class="desktop desktop-1" alt="Un screenshot del modulo de consultas de neogaleno"></div>
+      </li>
+			<li class="splide__slide">
+        <div class="desktop desktop-2" alt="Un screenshot del modulo de historial de consultas de neogaleno"></div>
+      </li>
+			<li class="splide__slide">
+        <div class="desktop desktop-3" alt="Un screenshot del modulo de estudios de neogaleno"></div>
+      </li>
+		</ul>
+  </div>
+</section>
+
+<script>
+  import Splide from '@splidejs/splide';
+
+  var splide = new Splide( '.splide', {
+    type  : 'fade',
+    rewind: true,
+    arrows: false,
+    pagination: false,
+    autoplay: true,
+    interval: 5000,
+  });
+
+  splide.mount();
+</script>
+
+<style>
+  .desktop {
+    width: 150rem;
+    height: 80rem;
+  }
+
+  .desktop-1 {
+    background: url(/webpage/ng-screen.png) no-repeat;
+    background-size: cover;
+  }
+
+  .desktop-2 {
+    background: url(/webpage/ng-screen-2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .desktop-3 {
+    background: url(/webpage/ng-screen-3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .desktop {
+      width: 150rem;
+      height: 85rem;
+    }
+  }
+
+ @media only screen and (min-width: 855px) and (max-width: 1024px) {
+    .desktop {
+      width: 150rem;
+      height: 85rem;
+    }
+  }
+</style>

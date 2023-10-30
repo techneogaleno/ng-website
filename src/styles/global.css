@@ -23,6 +23,15 @@ body {
   }
 }
 
+
+@media only screen and (min-width: 1680px) {
+  html {
+    padding: 0;
+    margin: 0;
+    font-size: 8.5px;
+  }
+}
+
 @media only screen and (min-width: 1570px) and (max-width: 1758px) {
   html {
     padding: 0;
