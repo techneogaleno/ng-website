@@ -103,66 +103,6 @@ body {
   margin-bottom: 6.5rem;
 }
 
-.wp-features {
-  padding: 10rem;
-  padding-top: 5rem;
-}
-
-.wp-features .grid-features {
-  @apply grid-cols-4;;
-}
-
-.wp-features .feature-container {
-  background: #FFFFFF;
-  box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.16);
-  width: 100%;
-  border-radius: 1.7rem;
-  padding: 1.8rem;
-  padding-top: 3.6rem;
-  padding-bottom: 5.7rem;
-}
-
-.wp-features .item {
-  padding: 1.5rem;
-}
-
-.wp-features .feature-icon {
-  width: 7rem;
-}
-
-.wp-features .container {
-  background: #FFFFFF;
-  box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.16);
-  width: 100%;
-  height: 23rem;
-  border-radius: 1.7rem;
-  padding: 3.4rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.wp-features .item .title {
-  @apply flex;
-  @apply items-center;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 2rem;
-  color: #003236;
-  margin-left: 1rem;
-}
-
-.wp-features .item .text {
-  @apply flex;
-  @apply items-center;
-  font-family: 'Rubik';
-  font-size: 1.6rem;
-  line-height: 2rem;
-  color: #003236;
-  margin-top: 1rem;
-}
-
 .wp-pricing {
   padding: 10rem;
   padding-top: 5rem;
