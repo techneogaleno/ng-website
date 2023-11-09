@@ -1,0 +1,216 @@
+---
+const appUser: string = import.meta.env.APP_URL;
+---
+
+<section class="wp-forms-features">
+  <div class="grid grid-cols-10">
+    <div class="col-span-5">
+      <div class="forms-screen"></div>
+    </div>
+    <div class="col-span-5">
+      <h1 class="title">Agrega tus propios formularios o tests con puntuación automatizada</h1>
+      <ul>
+        <li>Digitaliza todos tus formularios existentes que están en papel.</li>
+        <li>Crea nuevos formularios a medida de que tu consulta los requiera.</li>
+        <li>Digitaliza tests y cuestionarios.</li>
+        <li>Automatiza la lógica  y la puntuación de los tests.</li>
+      </ul>
+      <div class="controls">
+        <a href={ appUser + "/demo/booking" } class="mt-10 white-btn">
+          Probar demo
+        </a>
+        <a href={ appUser + "/users/sign_up" } class="primary-btn">
+          Crea cuenta ¡gratis!
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .wp-forms-features {
+    background-color: #f5f5f5;
+    padding: 15rem 15rem;
+  }
+
+  .forms-screen {
+    background-image: url('/webpage/forms.png');
+    background-size: 92rem;
+    background-position: -2rem -1rem;
+    width: 90%;
+    height: 60rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  .title {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.5rem;
+    line-height: 6rem;
+    color: #003236;
+    text-align: left;
+    margin-bottom: 6.5rem;
+    width: 75%;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 2rem;
+    font-size: 2.4rem;
+    width: 78%;
+    margin-bottom: 7rem;
+  }
+
+  li {
+    margin-bottom: 3rem;
+    line-height: 4rem;
+  }
+
+  .primary-btn {
+    font-size: 2rem !important;
+    font-weight: 400;
+    padding: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-left: 1rem;
+    border: 1px solid #FFB26D;
+  }
+
+  .white-btn {
+    font-size: 2rem !important;
+    font-weight: 400;
+    padding: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border: 1px solid #FFB26D;
+    background-color: #f5f5f5;
+  }
+
+  @media only screen and (max-width: 1445px) {
+    .wp-forms-features {
+      padding: 15rem 10rem;
+    }
+
+    .title {
+      width: 85%;
+    }
+
+    ul {
+      width: 85%;
+    }
+  }
+
+  @media only screen and (max-width: 1025px) {
+    .col-span-5 {
+      grid-column: span  10/ span 10;
+    }
+
+    .forms-screen {
+      margin-bottom: 10rem;
+      width: 69%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .title {
+      font-size: 4rem;
+      margin-bottom: 3.5rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    ul {
+      font-size: 2.5rem;
+      width: 100%;
+      margin-bottom: 7rem;
+      text-align: center;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 5rem;
+      line-height: 4rem;
+    }
+
+    .primary-btn {
+      font-size: 2.5rem !important;
+    }
+
+    .white-btn {
+      font-size: 2.5rem !important;
+      margin-top: 0 !important;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 790px) {
+    .forms-screen {
+      width: 97%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .wp-forms-features {
+      padding: 15rem 3rem;
+    }
+
+    .forms-screen {
+      display: none;
+    }
+
+    .title {
+      font-size: 3.9rem;
+    }
+
+    ul {
+      font-size: 2.5rem;
+    }
+
+    li {
+      margin-bottom: 2rem;
+      line-height: 4rem;
+    }
+
+    .primary-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .white-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .wp-forms-features {
+      padding: 10rem 3rem;
+    }
+
+    .title {
+      font-size: 3.5rem;
+    }
+
+    ul {
+      font-size: 2rem;
+    }
+  }
+</style>
