@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Neogaleno Website
 
 ```sh
 npm create astro@latest -- --template minimal
