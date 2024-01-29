@@ -162,9 +162,8 @@ splide.mount();
 
   .wp-quotes {
     background: #009BA9;
-    padding-top: 15rem;
-    padding-bottom: 15rem;
-    height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .title {
@@ -175,7 +174,7 @@ splide.mount();
     line-height: 3.8rem;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   .splide {
@@ -188,12 +187,14 @@ splide.mount();
     padding: 4rem;
   }
 
-  /* padding-left: 7rem;
-  padding-right: 7rem; */
+  /*
+    padding-left: 7rem;
+    padding-right: 7rem;
+    width: 100%;
+   */
   .item {
     background: #ffffff;
-    padding: 2rem;
-    width: 100%;
+    padding: 2rem 7rem;
     min-height: 25rem;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
     border-radius: 8px;
@@ -209,13 +210,13 @@ splide.mount();
     height: 5.2em !important;
     width: 5.2em !important;
   }
-
+  
+  /* transform: scale(1.1); */
   .splide__slide.is-active .item {
     position: relative;
     top: -5rem;
-    height: 40rem;
+    height: 30rem;
     background: #ececec;
-    transform: scale(1.1);
     z-index: 2;
   }
 
