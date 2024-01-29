@@ -122,13 +122,25 @@
 </section>
 
 <style>
-.wp-features {
+#features {
+  height: 100vh;
+}
+/*
   padding: 10rem;
   padding-top: 5rem;
+*/
+.wp-features {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
 }
 
 .wp-features .grid-features {
   @apply grid-cols-4;;
+  gap: 1em;
 }
 
 .wp-features .feature-container {
@@ -141,9 +153,11 @@
   padding-bottom: 5.7rem;
 }
 
+/* 
 .wp-features .item {
   padding: 1.5rem;
 }
+ */
 
 .wp-features .feature-icon {
   width: 7rem;
@@ -184,6 +198,10 @@
 
 
 @media only screen and (max-width: 1025px) {
+  #features{
+    height: auto;
+    padding: 5rem;
+  }
   .col-span-1 {
       grid-column: span 2 / span 2;
   }

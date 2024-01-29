@@ -7,7 +7,7 @@
     <img src="/webpage/wp-logo.svg" class="logo" alt="Logo de neogaleno" />
     <div class="title">Tu tiempo es para tus pacientes</div>
     <div class="items grid grid-contact">
-      <div class="col-span-1">
+      <div class="col-span-1" style="--delay: 0.1s">
         <div class="item">
           <div class="flags">
             <img src="/webpage/mxn.svg" alt="Bandera de Mexico" />
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1">
+      <div class="col-span-1" style="--delay: 0.25s">
         <div class="item">
           <div class="flags">
             <img src="/webpage/col.svg" alt="Bandera de Colombia" />
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1">
+      <div class="col-span-1" style="--delay: 0.35s">
         <div class="item">
           <div class="flags">
             <img src="/webpage/ven.svg" alt="Bandera de Venezuela" />
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1">
+      <div class="col-span-1" style="--delay: 0.45s">
         <div class="item">
           <div class="info-2">
             Resto de <span class="info">LATAM + España</span>
@@ -114,6 +114,41 @@
     </div>
   </div>
 </div>
+
+<script>
+let animation = false
+const isInViewport = ()=> {
+      const elem = document.querySelector('#contact.wp-contact')
+      if(elem){
+
+        const distance = elem.getBoundingClientRect()
+  
+        const isVisible =
+          distance.top <
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          distance.bottom > 0
+  
+        if (isVisible && !animation) {
+          animation = true
+          document
+            .querySelectorAll('.items.grid.grid-contact .col-span-1')
+            .forEach( e => {
+              e.classList.add('animate')
+            })
+        }
+        if (!isVisible && animation) {
+          animation = false
+          document
+            .querySelectorAll('.items.grid.grid-contact .col-span-1')
+            .forEach( e => {
+              e.classList.remove('animate')
+            })
+        }
+      }
+      return animation
+    }
+setInterval(isInViewport, 1000)
+</script>
 
 <style>
 .wp-contact .info {
@@ -160,13 +195,18 @@
   z-index: 9;
 }
 
-.wp-contact .item {
-  background: #ffffff;
-  border-radius: 2rem;
+/*
   width: 32.8rem;
   height: 20rem;
-  padding-top: 2rem;
   margin-bottom: 4rem;
+  padding-top: 2rem;
+  */
+.wp-contact .item {
+  background: #ffffff;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 2rem;
+  min-height: 150px;
 }
 
 .wp-contact .flags {
@@ -213,9 +253,11 @@
   margin-left: 3rem;
 }
 
+/* width: 75rem; */
 .wp-contact .grid-contact {
   @apply grid-cols-2;
-  width: 75rem;
+  width: 70rem;
+  gap: 0.7em;
 }
 
 .wp-footer {
@@ -259,6 +301,29 @@
   font-style: normal;
   font-weight: 400;
   color: #009BA9;
+}
+.items.grid.grid-contact .col-span-1{
+  opacity: 0;
+}
+.animate {
+  animation-name: aparece;
+  animation-delay: var(--delay);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.grid-contact div {
+  transition: all 0.3s;
+}
+
+/* The animation code */
+@keyframes aparece {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1000px) {
