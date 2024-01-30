@@ -1,0 +1,215 @@
+<div id='content-testimonial'>
+  <div class='testimonial active'>
+    <blockquote>
+      Lo que más me ha gustado es la posibilidad de personalizar mi expediente y
+      digitalizar todos mis antiguos formatos en papel. Ahora soy 100% digital!
+    </blockquote>
+    <div></div>
+    <p>Abril Camacho Cervantes - Gineco-obstetra</p>
+  </div>
+
+  <div class='testimonial'>
+    <blockquote>
+      El soporte al cliente es excepcional. Siempre están dispuestos a ayudar y
+      resolver cualquier inquietud de manera rápida
+    </blockquote>
+    <div></div>
+    <p>José Levy - Pediatra</p>
+  </div>
+
+  <div class='testimonial'>
+    <blockquote>
+      Amigable y fácil de utilizar, la función de control de pagos permite un
+      tener un récord preciso y al día sobre la parte monetaria. Aplicación 100%
+      recomendada!
+    </blockquote>
+    <div></div>
+    <p>Alexandra Nelson - Psicóloga</p>
+  </div>
+
+  <div class='testimonial'>
+    <blockquote>
+      Todo bien, excelente servicio y muy buena plataforma
+    </blockquote>
+    <div></div>
+    <p>Vero Rubio - Enfermera</p>
+  </div>
+
+  <div class='testimonial'>
+    <blockquote>
+      Como asistente Neogaleno ha hecho mi trabajo más fácil. Puedo programar
+      citas, confirmar pacientes de forma automatizada y bajar en Excel la
+      información para mi contador
+    </blockquote>
+    <div></div>
+    <p>Amelia Rodríguez - Asistente</p>
+  </div>
+
+  <div class='testimonial'>
+    <blockquote>
+      Pasar de expedientes en papel a digital realmente me ahorra tiempo, en
+      especial enviar las recetas por email con mi firma digital en automático
+    </blockquote>
+    <div></div>
+    <p>Alejandra Morales - Ginecóloga</p>
+  </div>
+
+  <h1>Qué dicen nuestros clientes</h1>
+</div>
+<script>
+  let indexElementActive = 0;
+
+  const activatorController = async () => {
+    const testimonials = document.querySelectorAll('.testimonial');
+    // clean
+    await testimonials.forEach((t) => {
+      if (t.classList.contains('active')) {
+        t.classList.remove('active');
+        console.log('eliminando', { t });
+      }
+    });
+
+    if (testimonials[indexElementActive + 1]) {
+      indexElementActive++;
+    } else {
+      indexElementActive = 0;
+    }
+
+    console.log({ indexElementActive }, testimonials[indexElementActive]);
+
+    if (indexElementActive > 0 && testimonials[indexElementActive]) {
+      testimonials[indexElementActive].classList.add('active');
+    } else {
+      testimonials[0].classList.add('active');
+      console.log(
+        'no encontrado.',
+        testimonials,
+        indexElementActive,
+        indexElementActive - 1
+      );
+    }
+
+    // const elementoActivo = document.querySelectorAll('div.testimonial.active');
+    // if (elementoActivo) {
+    //     elementoActivo
+    //   elementoActivo[0].classList.remove('active');
+    // }
+
+    console.log({
+      testimonials,
+      indexElementActive,
+      l: testimonials.length,
+    });
+  };
+  setInterval(activatorController, 10000);
+</script>
+<style>
+  #content-testimonial {
+    width: 100%;
+    position: relative;
+    background-color: #149ba9;
+    padding: 14vh 0;
+    overflow: hidden;
+  }
+  /* font-style: normal; */
+  #content-testimonial h1 {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 4.2rem;
+    line-height: 3.8rem;
+    color: #ffffff;
+    text-align: center;
+    transform: translateY(82px);
+    /* font-style: oblique; */
+  }
+  .testimonial blockquote {
+    margin: 10px 10px 0;
+    background: #efefef;
+    padding: 20px 60px;
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    font-style: italic;
+  }
+
+  .testimonial blockquote:before,
+  .testimonial blockquote:after {
+    content-testimonial: '\201C';
+    position: absolute;
+    font-size: 80px;
+    line-height: 1;
+    color: #757f9a;
+    font-style: normal;
+  }
+
+  .testimonial blockquote:before {
+    top: 0;
+    left: 10px;
+  }
+
+  .testimonial blockquote:after {
+    content-testimonial: '\201D';
+    right: 10px;
+    bottom: -0.5em;
+  }
+
+  .testimonial div {
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #efefef;
+    margin: 0 0 0 60px;
+  }
+
+  .testimonial p {
+    margin: 8px 0 0 20px;
+    text-align: left;
+    color: #fff;
+  }
+
+  div.testimonial {
+    opacity: 0;
+    position: absolute;
+    top: 3vh;
+    right: 0;
+    bottom: 0;
+    left: 25vw;
+    max-width: 50vw;
+  }
+
+  /* style='--delay: 10s' */
+  /* animation-delay: var(--delay); */
+  /* animation-iteration-count: infinite; */
+  div.testimonial.active {
+    animation: testimonio;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, -0.32, 0, 0.95);
+  }
+
+  @keyframes testimonio {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+      transform: translateX(150%);
+    }
+    20% {
+      opacity: 1;
+      transform: scale(1) translateX(0%);
+    }
+
+    70% {
+      opacity: 1;
+      transform: scale(1) translateX(0%);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(1) translateX(10%);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) translateX(-150%);
+    }
+  }
+</style>
