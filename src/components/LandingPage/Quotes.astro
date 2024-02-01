@@ -108,10 +108,62 @@ splide.mount();
 </script>
 
 <style>
+  .splide__slide,
+  .splide__list,
+  .splide__slide.is-visible.is-prev,
+  .splide__slide.is-active,
+  .splide__slide.is-visible.is-next{
+    transition: all 1.5s !important;
+  }
+
+  .splide__slide.is-prev{
+    animation-name: reducir;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+  }
+
+  .splide__slide.is-active{
+    animation-name: agrandar;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .splide__slide.is-active div.item{
+    animation-name: cambioColor;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+/* The animation code */
+@keyframes agrandar {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes reducir {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cambioColor {
+    0% {
+      background-color: #fff;
+    }
+    100% {
+      background-color: beige;
+  }
+}
+
   .wp-quotes {
     background: #009BA9;
-    padding-top: 15rem;
-    padding-bottom: 15rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .title {
@@ -122,7 +174,7 @@ splide.mount();
     line-height: 3.8rem;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 10rem;
+    padding-bottom: 5rem;
   }
 
   .splide {
@@ -135,20 +187,54 @@ splide.mount();
     padding: 4rem;
   }
 
-  .item {
-    background: #ffffff;
-    padding: 2rem;
+  /*
     padding-left: 7rem;
     padding-right: 7rem;
     width: 100%;
-    height: 30rem;
+   */
+  .item {
+    background: #ffffff;
+    padding: 2rem 7rem;
+    min-height: 25rem;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
     border-radius: 8px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .item > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;    
+    padding-top: 1em;
+  }
+  .splide__slide.is-active div.item, 
+  li.splide__slide > div,
+  div.item{
+    background-image: url(/webpage/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 3% 3%;
+    background-size: 7%;
+    padding: 2em;
+    position: relative;
+    max-height: 200px;
+  }
+  div.item::after{
+    content: '';
+    background-image: url(/webpage/bg-pattern-quotation2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
   }
 
   .splide__arrow svg {
@@ -156,13 +242,13 @@ splide.mount();
     height: 5.2em !important;
     width: 5.2em !important;
   }
-
+  
+  /* transform: scale(1.1); */
   .splide__slide.is-active .item {
     position: relative;
     top: -5rem;
-    height: 40rem;
+    height: 30rem;
     background: #ececec;
-    transform: scale(1.1);
     z-index: 2;
   }
 
@@ -170,8 +256,9 @@ splide.mount();
     padding-top: 5rem;
   }
 
+  /* margin-top: 3rem; */
   .client {
-    margin-top: 3rem;
+    padding: 1.5rem 0;
     color: #009BA9;
   }
 
@@ -198,6 +285,9 @@ splide.mount();
   }
 
   @media (max-width: 1380px) {
+    .wp-quotes{
+      height: auto;
+    }
     .item {
       height: 35rem;
     }
@@ -208,6 +298,9 @@ splide.mount();
   }
 
   @media (max-width: 1025px) {
+    .wp-quotes{
+      height: auto;
+    }
     .item {
       height: 35rem;
     }

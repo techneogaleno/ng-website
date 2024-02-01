@@ -1,0 +1,136 @@
+<section class='splide_banner' aria-label='Home carousel'>
+  <div class='splide_banner__track'>
+    <ul class='splide_banner__list'>
+      <li class='splide_banner__slide is-active is-visible'>
+        <div class='desktop desktop-1'></div>
+      </li>
+    </ul>
+  </div>
+</section>
+<script>
+  let ctrIndexActive = 1;
+  function controlerBanner() {
+    if (ctrIndexActive < 3) {
+      ctrIndexActive++;
+    } else {
+      ctrIndexActive = 1;
+    }
+    if (document.querySelectorAll('div.desktop')[1]) {
+      const classDesktop = document
+        .querySelectorAll('div.desktop')[1]
+        .classList.item(1);
+      if (classDesktop) {
+        document
+          .querySelectorAll('div.desktop')[1]
+          .classList.replace(classDesktop, `desktop-${ctrIndexActive}`);
+      }
+      console.log({ classDesktop });
+    }
+  }
+  setInterval(controlerBanner, 5000);
+</script>
+<style>
+  .desktop {
+    width: 150rem;
+    height: 80rem;
+  }
+
+  .desktop-1 {
+    background: url(/webpage/ng-screen.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .desktop-2 {
+    background: url(/webpage/ng-screen-2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .desktop-3 {
+    background: url(/webpage/ng-screen-3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 5s infinite;
+    animation-direction: alternate;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .desktop {
+      width: 150rem;
+      height: 85rem;
+    }
+  }
+
+  @media only screen and (min-width: 855px) and (max-width: 1024px) {
+    .desktop {
+      width: 150rem;
+      height: 85rem;
+    }
+  }
+  /* :not(.is-active.is-visible) */
+  /* opacity: 0; */
+  .splide_banner__slide.previus {
+    animation: desaparece;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  /* animation-fill-mode: backwards; */
+  /* animation-fill-mode: forwards; queda en el ultimo*/
+  /* animation-delay: 0.3s; */
+  /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  /* 
+  animation: aparece;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in; 
+  animation-direction: alternate;
+  */
+  .splide_banner__slide.is-active.is-visible {
+    animation: fadeIn 1s;
+  }
+  .splide_banner__slide.is-prev {
+    animation: desaparece;
+    animation-duration: 0.3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes desaparece {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes aparece {
+    0% {
+      opacity: 0 !important;
+    }
+    50% {
+      opacity: 1 !important;
+    }
+    100% {
+      opacity: 0 !important;
+    }
+  }
+</style>
