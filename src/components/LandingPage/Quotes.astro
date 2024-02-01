@@ -202,7 +202,39 @@ splide.mount();
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .item > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;    
+    padding-top: 1em;
+  }
+  .splide__slide.is-active div.item, 
+  li.splide__slide > div,
+  div.item{
+    background-image: url(/webpage/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 3% 3%;
+    background-size: 7%;
+    padding: 2em;
+    position: relative;
+    max-height: 200px;
+  }
+  div.item::after{
+    content: '';
+    background-image: url(/webpage/bg-pattern-quotation2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
   }
 
   .splide__arrow svg {
