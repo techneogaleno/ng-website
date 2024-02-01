@@ -202,7 +202,16 @@ splide.mount();
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+  .splide__slide.is-active div.item, 
+  li.splide__slide > div,
+  div.item{
+    background-image: url(/webpage/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 10%;
+    background-size: 7%;
+    padding: 2em;
   }
 
   .splide__arrow svg {
