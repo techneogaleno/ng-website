@@ -1,5 +1,7 @@
 ---
 import ScreenCarousel from '../ui/carousel/ScreenCarousel.astro';
+import BannerHome from '../ui/carousel/BannerHome.astro';
+
 
 const appUser: string = import.meta.env.APP_URL;
 ---
@@ -33,24 +35,53 @@ const appUser: string = import.meta.env.APP_URL;
         </div>
       </div>
       <div class="col-span-1">
-        <div class="desktop sm:hidden lg:inline-flex xl:inline-flex">
-          <ScreenCarousel />
+        <div class="desktop sm:hidden lg:inline-flex xl:inline-flex bg-shadow">
+          <!-- <ScreenCarousel /> -->
+          <BannerHome />
         </div>
       </div>
-    </div>
+    </div>    
   </div>
   <img src="/webpage/wp-home.svg" class="decoration sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
+  
+  <div class="certificate">
+    <div>Cumplimos con las NOMs de COFEPRIS</div>
+  </div>
+  <div class="certificate-sm">
+    <div class="">Cumplimos con las NOMs de COFEPRIS</div>
+  </div>
 </section>
-
-<div class="certificate">
-  <div>Cumplimos con las NOMs de COFEPRIS</div>
-</div>
-<div class="certificate-sm">
-  <div class="">Cumplimos con las NOMs de COFEPRIS</div>
-</div>
 
 
 <style>
+section.wp-home{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+section.wp-home div.certificate{
+  position: initial;
+    width: 100%;
+    padding: 1em;
+}
+.bg-shadow{
+  animation: shadowAnimated 10s infinite;
+    animation-direction: alternate;
+}
+@keyframes shadowAnimated {
+  0%{
+    box-shadow:none;
+  }
+  20% {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  }
+  95% {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    box-shadow:none;
+  }
+}
 .bg-home {
   background : #009BA9;
   height: 60rem;
@@ -104,7 +135,6 @@ const appUser: string = import.meta.env.APP_URL;
   top: 2rem;
   width: 100rem;
   height: 80rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem 0 0 1.5rem;
   overflow: hidden;
 }
