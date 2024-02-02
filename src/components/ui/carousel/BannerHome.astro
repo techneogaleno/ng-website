@@ -20,14 +20,16 @@
         .querySelectorAll('div.desktop')[1]
         .classList.item(1);
       if (classDesktop) {
+
         document
           .querySelectorAll('div.desktop')[1]
           .classList.replace(classDesktop, `desktop-${ctrIndexActive}`);
+        
       }
       console.log({ classDesktop });
     }
   }
-  setInterval(controlerBanner, 5000);
+  setInterval(controlerBanner, 3000);
 </script>
 <style>
   .desktop {
@@ -35,19 +37,26 @@
     height: 80rem;
   }
 
-  .desktop-1 {
+  /*
     background: url(/webpage/ng-screen.png) no-repeat;
     background-size: cover;
     background-position: center;
     animation: fadeIn 5s infinite;
     animation-direction: alternate;
-  }
+  */
 
+  .desktop-1 {
+    background: url(/webpage/ng-screen.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 3s infinite;
+    animation-direction: alternate;
+  }
   .desktop-2 {
     background: url(/webpage/ng-screen-2.png) no-repeat;
     background-size: cover;
     background-position: center;
-    animation: fadeIn 5s infinite;
+    animation: fadeIn 3s infinite;
     animation-direction: alternate;
   }
 
@@ -55,7 +64,7 @@
     background: url(/webpage/ng-screen-3.png) no-repeat;
     background-size: cover;
     background-position: center;
-    animation: fadeIn 5s infinite;
+    animation: fadeIn 3s infinite;
     animation-direction: alternate;
   }
 
@@ -102,14 +111,14 @@
     0% {
       opacity: 0;
     }
-    20% {
+    10% {
       opacity: 1;
     }
-    95% {
+    90% {
       opacity: 1;
     }
     100% {
-      opacity: 0.2;
+      opacity: 0;
     }
   }
 
