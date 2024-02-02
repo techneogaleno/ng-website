@@ -1,145 +1,37 @@
-<section class='splide_banner' aria-label='Home carousel'>
-  <div class='splide_banner__track'>
-    <ul class='splide_banner__list'>
-      <li class='splide_banner__slide is-active is-visible'>
-        <div class='desktop desktop-1'></div>
-      </li>
-    </ul>
+<div class="carousel js-flickity" data-flickity-options='{ "draggable":true,"fade":true,"wrapAround": true, "autoPlay": true, "prevNextButtons":false, "pageDots":false }'>
+  <div class="carousel-cell" style="--img: url(/webpage/ng-screen.png)">
   </div>
-</section>
-<script>
-  let ctrIndexActive = 1;
-  function controlerBanner() {
-    if (ctrIndexActive < 3) {
-      ctrIndexActive++;
-    } else {
-      ctrIndexActive = 1;
-    }
-    if (document.querySelectorAll('div.desktop')[1]) {
-      const classDesktop = document
-        .querySelectorAll('div.desktop')[1]
-        .classList.item(1);
-      if (classDesktop) {
+  <div class="carousel-cell" style="--img: url(/webpage/ng-screen-2.png)">
+  </div>
+  <div class="carousel-cell" style="--img: url(/webpage/ng-screen-3.png)">
+  </div>
+</div>
 
-        document
-          .querySelectorAll('div.desktop')[1]
-          .classList.replace(classDesktop, `desktop-${ctrIndexActive}`);
-        
-      }
-      console.log({ classDesktop });
-    }
-  }
-  setInterval(controlerBanner, 3000);
-</script>
 <style>
-  .desktop {
-    width: 150rem;
-    height: 80rem;
+  .gallery.js-flickity.flickity-enabled{
+    width: 100%;
+  }
+  .flickity-viewport{
+    width: 750px;
+    height: 100% !important;
   }
 
-  /*
-    background: url(/webpage/ng-screen.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: fadeIn 5s infinite;
-    animation-direction: alternate;
-  */
-
-  .desktop-1 {
-    background: url(/webpage/ng-screen.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: fadeIn 3s infinite;
-    animation-direction: alternate;
+  .carousel {
+    width: 100%;
+    height: 100%; 
+    }
+ 
+  .carousel-cell{
+      height: 100%; 
+      width: 100%;
+      background-image: var(--img);
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 165%;     
   }
-  .desktop-2 {
-    background: url(/webpage/ng-screen-2.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: fadeIn 3s infinite;
-    animation-direction: alternate;
-  }
-
-  .desktop-3 {
-    background: url(/webpage/ng-screen-3.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: fadeIn 3s infinite;
-    animation-direction: alternate;
-  }
-
-  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-    .desktop {
-      width: 150rem;
-      height: 85rem;
-    }
-  }
-
-  @media only screen and (min-width: 855px) and (max-width: 1024px) {
-    .desktop {
-      width: 150rem;
-      height: 85rem;
-    }
-  }
-  /* :not(.is-active.is-visible) */
-  /* opacity: 0; */
-  .splide_banner__slide.previus {
-    animation: desaparece;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-
-  /* animation-fill-mode: backwards; */
-  /* animation-fill-mode: forwards; queda en el ultimo*/
-  /* animation-delay: 0.3s; */
-  /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
-  /* 
-  animation: aparece;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in; 
-  animation-direction: alternate;
-  */
-  .splide_banner__slide.is-active.is-visible {
-    animation: fadeIn 1s;
-  }
-  .splide_banner__slide.is-prev {
-    animation: desaparece;
-    animation-duration: 0.3s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes desaparece {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes aparece {
-    0% {
-      opacity: 0 !important;
-    }
-    50% {
-      opacity: 1 !important;
-    }
-    100% {
-      opacity: 0 !important;
-    }
+  
+  .carousel-image {
+      min-width: 100px;
+      height: 200px;
   }
 </style>
