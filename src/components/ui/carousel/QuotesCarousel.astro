@@ -1,0 +1,168 @@
+---
+//  "cellAlign":"left",
+//  "autoPlay":true 3s
+---
+<!-- Flickity init carousel -->
+<div class="container-quotes">
+    <h1 class="title-quotes">Qué dicen nuestros clientes</h1>
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "wrapAround": true,"autoPlay":5000 }'>
+      <div class="gallery-cell">
+        <div class="quote">
+            <div class="text-container">
+                <img src="webpage/bg-pattern-quotation.svg" class="quote-1" />
+                    Lo que más me ha gustado es la posibilidad de personalizar mi expediente y digitalizar todos mis antiguos formatos en papel. Ahora soy 100% digital!
+                  <div class="client">Abril Camacho Cervantes - Gineco-obstetra</div>
+        
+                <img src="webpage/bg-pattern-quotation2.svg" class="quote-2"  />
+            </div>
+        </div>
+      </div>
+      <div class="gallery-cell">
+        <div class="quote">
+            <div class="text-container">
+                <img src="webpage/bg-pattern-quotation.svg" class="quote-1" />
+                    Amigable y fácil de utilizar, la función de control de pagos permite un tener un récord preciso y al día sobre la parte monetaria. Aplicación 100% recomendada!
+                <div class="client">Alexandra Nelson - Psicóloga</div>
+                <img src="webpage/bg-pattern-quotation2.svg" class="quote-2"  />
+            </div>
+        </div>
+    </div>
+      <div class="gallery-cell">
+    
+        <div class="quote">
+            <div class="text-container">
+                <img src="webpage/bg-pattern-quotation.svg" class="quote-1" />
+                   Todo bien, excelente servicio y muy buena plataforma
+                <div class="client">Vero Rubio - Enfermera </div>
+                <img src="webpage/bg-pattern-quotation2.svg" class="quote-2"  />
+            </div>
+        </div>
+      </div>
+      <div class="gallery-cell">
+    
+        <div class="quote">
+            <div class="text-container">
+                <img src="webpage/bg-pattern-quotation.svg" class="quote-1" />
+                Como asistente Neogaleno ha hecho mi trabajo más fácil. Puedo programar citas, confirmar pacientes de forma automatizada y bajar en Excel la información para mi contador
+                <div class="client">Amelia Rodríguez - Asistente </div>
+                <img src="webpage/bg-pattern-quotation2.svg" class="quote-2"  />
+            </div>
+        </div>
+      </div>
+      <div class="gallery-cell">
+    
+        <div class="quote">
+            <div class="text-container">
+                <img src="webpage/bg-pattern-quotation.svg" class="quote-1" />
+                El soporte al cliente es excepcional. Siempre están dispuestos a ayudar y resolver cualquier inquietud de manera rápida
+                <div class="client">José Levy - Pediatra</div>
+                <img src="webpage/bg-pattern-quotation2.svg" class="quote-2"  />
+            </div>
+        </div>
+      </div>
+    
+      <div class="gallery-cell">
+        <div class="quote">
+            <div class="text-container">
+                <img src="webpage/bg-pattern-quotation.svg" class="quote-1" />
+                Pasar de expedientes en papel a digital realmente me ahorra tiempo, en especial enviar las recetas por email con mi firma digital en automático
+                <div class="client">Alejandra Morales - Ginecóloga</div>
+                <img src="webpage/bg-pattern-quotation2.svg" class="quote-2"  />
+            </div>
+        </div>
+       </div>
+    </div>
+</div>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container-quotes{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.title-quotes{
+    color: #fff;
+    position: absolute;
+    top: 0em;
+    z-index: 10;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-size: 2.5em;
+    overflow: hidden;
+    padding: 4rem 0;
+}
+.gallery.js-flickity{
+    background: #009BA9;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+}
+.client{
+    color: #009BA9;
+}
+.quote{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+.text-container{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    border-radius: 7px;
+    height: 80%;
+    width: 80%;
+    background-color: azure;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+    gap: 1.5em;
+    font-size: 1.25em;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+}
+.quote-1{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 25px;
+}
+.quote-2{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    width: 25px;
+}
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  /* background: #8C8; */
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(gallery-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+</style>
