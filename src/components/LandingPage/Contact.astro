@@ -333,6 +333,17 @@ setInterval(isInViewport, 1000)
 }
 
 @media (max-width: 650px) {
+  #contact{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2rem 0;
+    position: relative;
+    height: auto;
+  }
+
   .logo {
     width: 40rem;
   }
@@ -344,15 +355,21 @@ setInterval(isInViewport, 1000)
 
   .wp-contact .item {
     width: 100%;
-    margin: 1rem;
+    margin: 0rem;
+    gap: 0px;
+  }
+  .items.grid.grid-contact{
+    margin: 0rem;
+    gap: 0px;
   }
 
+  /* padding-left: 5rem; */
   .wp-contact .contact-container {
-    padding-left: 5rem;
+    padding: 0;
   }
 
   .col-span-1 {
-    padding: 2rem;
+    padding: 0rem;
   }
 }
 
@@ -392,6 +409,7 @@ setInterval(isInViewport, 1000)
 
   .wp-contact .contact-container {
     padding-left: 0;
+    padding-top: 0;
   }
 }
 </style>
