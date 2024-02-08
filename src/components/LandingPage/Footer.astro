@@ -1,4 +1,6 @@
 ---
+import ModalTerms from '../ui/ModalTerms.astro';
+import ModalPrivacity from '../ui/ModalPrivacity.astro'
 ---
 <div class="wp-footer">
   <div>
@@ -28,7 +30,7 @@
           </svg>
         </a>
         <a
-          href="https://www.linkedin.com/company/neogaleno/"
+          href="https://www.instagram.com/neogaleno/"
           target="_blank"
           @click="linkdnEvent()"
           class="icon"
@@ -40,16 +42,21 @@
       </div>
     </div>
     <div class="web-footer-center-section grid grid-cols-5">
+
       <div class="col-span-1">
-        Términos y Condiciones
+        <ModalPrivacity />
         <span class="separator">&#9679;</span>
       </div>
       <div class="col-span-1">
-        CONDUSEF
+        <ModalTerms></ModalTerms>
         <span class="separator">&#9679;</span>
       </div>
       <div class="col-span-1">
-        PROFECO
+        <a href="https://www.condusef.gob.mx/" target="_blank">CONDUSEF</a>
+        <span class="separator">&#9679;</span>
+      </div>
+      <div class="col-span-1">        
+        <a href="https://www.gob.mx/profeco" target="_blank">PROFECO</a>
         <span class="separator">&#9679;</span>
       </div>
       <div class="col-span-1">

@@ -4,8 +4,8 @@ const appUser: string = import.meta.env.APP_URL;
 
 <section id="about" class="wp-about">
   <div class="wp-title">¿Por qué Neogaleno?</div>
-  <div class="grid grid-cols-10">
-    <div class="features col-span-4 lg:col-span-4 md:col-span-10 sm:col-span-10 sm:mt-40">
+  <div class="grid grid-cols-10 container-grid-about">
+    <div class="features col-span-4 lg:col-span-4 md:col-span-10 sm:col-span-10 sm:mt-20">
       <div class="item">
         <div class="grid grid-cols-10">
           <div class="col-span-2">
@@ -96,7 +96,12 @@ const appUser: string = import.meta.env.APP_URL;
 .wp-about {
   padding: 10rem;
 }
-
+.wp-about .wp-title{
+  margin-bottom: 2rem;
+}
+.container-grid-about{
+  height: 43em;
+}
 .item {
   padding-right: 5rem;
 }
@@ -207,7 +212,7 @@ ul {
 
 @media only screen and (max-width: 1758px) {
   .wp-about {
-    padding-top: 20rem;
+    padding-top: 10rem;
   }
 }
 
@@ -327,6 +332,11 @@ ul {
 }
 
 @media only screen and (max-width: 639px) {
+
+  .container-grid-about{
+    height: auto;
+  }
+  
   .sm\:col-span-10 {
     grid-column: span 10 / span 10;
   }

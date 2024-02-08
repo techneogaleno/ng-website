@@ -1,5 +1,5 @@
 ---
-
+const appUser: string = import.meta.env.APP_URL;
 ---
 
 <div id="pricing" class="wp-pricing">
@@ -21,39 +21,44 @@
             </div>
           </div>
           <div class="body">
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+
+            <div class="items-box">
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">Todas las funcionalidades</div>
               </div>
-              <div class="col-span-6">Todas las funcionalidades</div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">1</div>
+                <div class="col-span-6">Consultorio</div>
+              </div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">1</div>
+                <div class="col-span-6">Asistente por consultorio</div>
+              </div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">50</div>
+                <div class="col-span-6">Pacientes máximo</div>
+              </div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">250</div>
+                <div class="col-span-6">Consultas</div>
+              </div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">250MB</div>
+                <div class="col-span-6">Almacenamiento de estudios</div>
+              </div>
             </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">1</div>
-              <div class="col-span-6">Consultorio</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">1</div>
-              <div class="col-span-6">Asistente por consultorio</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">50</div>
-              <div class="col-span-6">Pacientes máximo</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">250</div>
-              <div class="col-span-6">Consultas</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">250MB</div>
-              <div class="col-span-6">Almacenamiento de estudios</div>
-            </div>
+
+
             <p class="message">No requiere tarjeta de crédito</p>
             <div class="button">
-              <a href="/users/sign_up" class="primary-btn">
+              <a href={ appUser + "/users/sign_up" } class="primary-btn">
                 Seleccionar plan
               </a>
             </div>
@@ -72,48 +77,51 @@
             </div>
           </div>
           <div class="body">
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+
+            <div class="items-box">
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">Todas las funcionalidades</div>
               </div>
-              <div class="col-span-6">Todas las funcionalidades</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">2</div>
-              <div class="col-span-6">Consultorios</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">2</div>
-              <div class="col-span-6">Asistentes por consultorio</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">500</div>
-              <div class="col-span-6">Pacientes máximo</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">2</div>
+                <div class="col-span-6">Consultorios</div>
               </div>
-              <div class="col-span-6">Consultas ilimitadas</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">2</div>
+                <div class="col-span-6">Asistentes por consultorio</div>
               </div>
-              <div class="col-span-6">
-                Almacenamiento de estudios ilimitados
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">500</div>
+                <div class="col-span-6">Pacientes máximo</div>
+              </div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">Consultas ilimitadas</div>
+              </div>
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">
+                  Almacenamiento de estudios ilimitados
+                </div>
               </div>
             </div>
             <!-- <div class="button">
@@ -139,59 +147,62 @@
             </div>
           </div>
           <div class="body">
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+
+            <div class="items-box">
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">Todas las funcionalidades</div>
               </div>
-              <div class="col-span-6">Todas las funcionalidades</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">4</div>
-              <div class="col-span-6">Consultorios</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                />
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">4</div>
+                <div class="col-span-6">Consultorios</div>
               </div>
-              <div class="col-span-6">Asistentes por consultorio</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                  />
+                </div>
+                <div class="col-span-6">Asistentes por consultorio</div>
               </div>
-              <div class="col-span-6">Pacientes ilimitados</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">Pacientes ilimitados</div>
               </div>
-              <div class="col-span-6">Consultas ilimitadas</div>
-            </div>
-            <div class="item grid grid-cols-8">
-              <div class="col-span-2 quantity">
-                <img
-                  class="pricing-infinite"
-                  src="/webpage/wp-infinite.svg"
-                  alt="Infinite"
-                />
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">Consultas ilimitadas</div>
               </div>
-              <div class="col-span-6">
-                Almacenamiento de estudios ilimitados
+              <div class="item grid grid-cols-8">
+                <div class="col-span-2 quantity vertical-center">
+                  <img
+                    class="pricing-infinite"
+                    src="/webpage/wp-infinite.svg"
+                    alt="Infinite"
+                  />
+                </div>
+                <div class="col-span-6">
+                  Almacenamiento de estudios ilimitados
+                </div>
               </div>
             </div>
             <!-- <div class="button">
@@ -266,32 +277,88 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
 </script>
 
 <style>
+#pricing{
+  padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: #FFFBF7;
+}
+#pricing-box.header .grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding-top: 1.5em;
+    width: 100%;
+    column-gap: 6em;
+}
+
+.item-flex{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.item-flex:nth-child(1){
+  max-width: 30%;
+}
+
+.item-flex:nth-child(2){
+  max-width: 70%;
+}
+
+.items-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 3.5rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.wp-title{
+  margin: 0;
+  padding: 1em 0;
+}
+/* 
+padding: 10rem;
+padding-top: 15rem;
+padding-bottom: 10rem; 
+*/
 .wp-pricing {
-  padding: 10rem;
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+  margin: 0;
+  padding: 1em 0;
 }
 
 .wp-pricing .grid-pricing {
   @apply grid-cols-3;
+  align-items: center;
+  gap: 3em;
+  padding: 0 10em;
 }
 
+/* margin-top: 10rem; */
 .wp-pricing .pricing-container {
   padding-left: 30rem;
   padding-right: 30rem;
-  margin-top: 10rem;
 }
 
+/* 
 .wp-pricing .item {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-
+ */
+/* height: 60rem; */
 .wp-pricing .pricing-box {
   background: #FFFFFF;
   box-shadow: 0px 20px 34px rgba(0, 0, 0, 0.17);
   border-radius: 28px;
-  height: 60rem;
+  height: auto;
 }
 
 .wp-pricing .pricing-infinite {
@@ -299,14 +366,16 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   margin-left: auto;
 }
 
+/* padding-top: 4rem; */
 .wp-pricing .pricing-box .header {
-  background: #009BA9;
+  background: #149CAA;
   border-radius: 2.8rem 2.8rem 0 0;
   height: 90px;
-  padding: 2rem;
-  padding-top: 4rem;
+  padding: 2rem 2rem 0 2rem;
 }
-
+.wp-pricing .pricing-box .header div.grid.grid-cols-2{
+  height: 100%;
+}
 .wp-pricing .pricing-box .plan {
   font-family: 'Rubik';
   font-style: normal;
@@ -314,6 +383,12 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   font-size: 2.8rem;
   line-height: 2.9rem;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 0.5em;
 }
 
 .wp-pricing .pricing-box .price {
@@ -324,8 +399,16 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   line-height: 1.7rem;
   color: #FFFFFF;
   text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* 
+margin-top: -.5rem;
+margin-bottom: .5rem; 
+*/
 .wp-pricing .pricing-box .price .amount {
   @apply flex;
   @apply justify-center;
@@ -337,16 +420,14 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   font-size: 2rem;
   line-height: 2.2rem;
   text-align: right;
-  color: #009BA9;
+  color: #149CAA;
   border-radius: .4rem;
   padding: .5rem;
-  margin-top: -.5rem;
-  margin-bottom: .5rem;
 }
 
 .wp-pricing .pricing-box .body {
   padding-top: 3rem;
-  /* padding-bottom: 3rem; */
+  padding-bottom: 3rem;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -355,9 +436,15 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   color: #003236;
 }
 
+/* 
+margin-bottom: 3rem;
+padding-right: 1rem; 
+margin: 0 auto;
+*/
 .wp-pricing .pricing-box .item {
-  margin-bottom: 3rem;
-  padding-right: 1rem;
+  width: 100%; 
+  margin: 0;
+  padding: 0;
 }
 
 .wp-pricing .pricing-box .quantity {
@@ -370,6 +457,14 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   text-align: right;
   padding-right: 2rem;
 }
+#pricing > div.pricing-container > div > div > div > div.body > div > div > div.col-span-2.quantity.vertical-center,
+.col-span-2.quantity.vertical-center{
+  justify-content: flex-end;
+  align-items: center!important;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
 
 .wp-pricing .pricing-box .button {
   @apply flex;
@@ -378,10 +473,11 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
 }
 
 .wp-pricing .pricing-box .primary-btn {
-  padding: 2rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1.5rem 5rem;
+  width: 75%;
+  text-align: center;
 }
 
 .wp-pricing .message {
@@ -396,7 +492,7 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
 }
 
 .wp-contact {
-  background: #009BA9;
+  background: #149CAA;
   height: 72.2rem;
 }
 
@@ -412,47 +508,51 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   width: 70%;
 }
 
+/* margin-top: 15rem; */
 .certificates {
-  margin-top: 15rem;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
+/* margin-top: 10rem; */
 @media (max-width: 1650px) {
   .wp-pricing .pricing-container {
     padding-left: 20rem;
     padding-right: 20rem;
-    margin-top: 10rem;
   }
 }
 
+/* margin-top: 10rem; */
 @media (max-width: 1490px) {
   .wp-pricing .pricing-container {
     padding-left: 15rem;
     padding-right: 15rem;
-    margin-top: 10rem;
   }
 }
 
+/* margin-top: 10rem; */
 @media (max-width: 1350px) {
   .wp-pricing .pricing-container {
     padding-left: 10rem;
     padding-right: 10rem;
-    margin-top: 10rem;
   }
 }
 
 @media (max-width: 1030px) {
+  #pricing{
+    height: auto;
+  }
   .wp-pricing {
     padding: 5rem;
     padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
   }
+  /* margin-top: 10rem; */
+  /* padding-left: 0;
+  padding-right: 0; */
   .wp-pricing .pricing-container {
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 10rem;
+    padding: 0rem 3rem 3rem 3rem;
   }
 
   .item{
@@ -469,7 +569,7 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   .item-pricing {
     padding-left: 20rem !important;
     padding-right: 20rem !important;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
 
   .pricing-box {
@@ -478,6 +578,10 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
 
   .certificates {
     margin-top: 5rem;
+  }
+  .wp-pricing,.grid-pricing{
+    padding: 0!important;
+    gap: 2rem !important;
   }
 }
 
@@ -497,7 +601,7 @@ document.getElementsByClassName('premium-plan')[0].innerHTML = price.premium;
   .item-pricing {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
   }
 }
 

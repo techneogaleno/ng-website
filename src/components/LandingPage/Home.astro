@@ -1,5 +1,6 @@
 ---
 import ScreenCarousel from '../ui/carousel/ScreenCarousel.astro';
+import BannerHome from '../ui/carousel/BannerHome.astro';
 
 const appUser: string = import.meta.env.APP_URL;
 ---
@@ -33,26 +34,62 @@ const appUser: string = import.meta.env.APP_URL;
         </div>
       </div>
       <div class="col-span-1">
-        <div class="desktop sm:hidden lg:inline-flex xl:inline-flex">
-          <ScreenCarousel />
+        <div class="desktop sm:hidden lg:inline-flex xl:inline-flex bg-shadow">
+          <!-- <ScreenCarousel /> -->
+          <BannerHome />
         </div>
       </div>
+    </div>    
+  </div>
+
+  <div class="section-img-div">
+    <img src="/webpage/wp-home.svg" class="decoration sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
+    
+    <div class="certificate">
+      <div>Cumplimos con las NOMs de COFEPRIS</div>
     </div>
   </div>
-  <img src="/webpage/wp-home.svg" class="decoration sm:hidden lg:inline-flex xl:inline-flex" alt="figura irregular, decoracion" />
+  <div class="certificate-sm">
+    <div class="">Cumplimos con las NOMs de COFEPRIS</div>
+  </div>
 </section>
-
-<div class="certificate">
-  <div>Cumplimos con las NOMs de COFEPRIS</div>
-</div>
-<div class="certificate-sm">
-  <div class="">Cumplimos con las NOMs de COFEPRIS</div>
-</div>
-
-
 <style>
+.section-img-div{
+  position: relative;
+}
+section.wp-home{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+section.wp-home div.certificate{
+  position: initial;
+    width: 100%;
+    padding: 1em;
+}
+/* 
+animation: shadowAnimated 3s infinite;
+animation-direction: alternate; 
+*/
+.bg-shadow{
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+@keyframes shadowAnimated {
+  0%{
+    box-shadow:none;
+  }
+  10% {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  }
+  90% {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    box-shadow:none;
+  }
+}
 .bg-home {
-  background : #009BA9;
+  background : #149CAA;
   height: 60rem;
   position: relative;
   z-index: 99999;
@@ -104,7 +141,6 @@ const appUser: string = import.meta.env.APP_URL;
   top: 2rem;
   width: 100rem;
   height: 80rem;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem 0 0 1.5rem;
   overflow: hidden;
 }
@@ -130,6 +166,13 @@ const appUser: string = import.meta.env.APP_URL;
   top: 2rem;
   text-align: right;
   width: 90%;
+}
+.certificate > div{
+    z-index: 10;
+    position: absolute;
+    bottom: 0.5em;
+    text-align: right;
+    width: 90vw;
 }
 
 .certificate-sm {
@@ -160,10 +203,11 @@ const appUser: string = import.meta.env.APP_URL;
 
 @media only screen and (min-width: 1281px) and (max-width: 1679px) {
   .bg-home {
-    background : #009BA9;
+    background : #149CAA;
     height: 48rem;
     position: relative;
-    z-index: 99999;
+    z-index: 1;
+    /* z-index: 99999; */
   }
 
   .desktop {
@@ -200,7 +244,7 @@ const appUser: string = import.meta.env.APP_URL;
 
 @media only screen and (min-width: 1200px) and (max-width: 1281px) {
   .bg-home {
-    background : #009BA9;
+    background : #149CAA;
     height: 48rem;
     position: relative;
     z-index: 99999;
@@ -222,7 +266,7 @@ const appUser: string = import.meta.env.APP_URL;
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .bg-home {
-    background : #009BA9;
+    background : #149CAA;
     height: 48rem;
     position: relative;
     z-index: 99999;
@@ -341,7 +385,7 @@ const appUser: string = import.meta.env.APP_URL;
 
 @media only screen and (min-width: 425px) and (max-width: 767px) {
   .bg-home {
-    background : #009BA9;
+    background : #149CAA;
     height: 90rem;
     position: relative;
     z-index: 99999;

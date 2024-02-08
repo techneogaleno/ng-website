@@ -51,7 +51,7 @@ const appUser: string = import.meta.env.APP_URL;
     line-height: 6rem;
     color: #003236;
     text-align: left;
-    margin-bottom: 6.5rem;
+    padding-bottom: 4rem;
     width: 75%;
   }
 
@@ -60,7 +60,7 @@ const appUser: string = import.meta.env.APP_URL;
     padding-left: 2rem;
     font-size: 2.4rem;
     width: 78%;
-    margin-bottom: 7rem;
+    padding-bottom: 2rem;
   }
 
   li {
@@ -90,7 +90,11 @@ const appUser: string = import.meta.env.APP_URL;
 
   @media only screen and (max-width: 1445px) {
     .wp-forms-features {
-      padding: 15rem 10rem;
+      padding: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
     }
 
     .title {
