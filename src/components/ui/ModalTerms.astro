@@ -3,8 +3,10 @@
 <div data-ml-modal id='modal-10'>
   <a href='#!' class='modal-overlay'></a>
   <div class='modal-dialog modal-dialog-lg'>
-    <a href='#!' class='modal-close'>&times;</a>
-    <h3 class='title-modal'>TÉRMINOS Y CONDICIONES</h3>
+    <section class="modal-header">
+      <a href='#!' class='modal-close'>&times;</a>
+      <h3 class='title-modal'>TÉRMINOS Y CONDICIONES</h3>
+    </section>
     <div class='modal-content newspaper'>
       <span class='sub-gray'>Última actualización: 20/11/23</span>
       <p>
@@ -372,10 +374,12 @@
     text-align: justify;
   }
 
+  /* 
+  position: absolute;
+  top: 13px;
+  right: 13px; 
+  */
   [data-ml-modal] .modal-close {
-    position: absolute;
-    top: 13px;
-    right: 13px;
     color: #0085a6;
     background-color: #fff;
     border-radius: 50%;
@@ -462,5 +466,23 @@
   pre {
     overflow: auto;
     font-size: 1em;
+  }
+  .modal-header{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    height: 4em;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #009BA9;
+  }
+  .modal-header h3{
+    font-size: 24px;
+    font-weight: 400;
+    width: 100%;
+    color: #fff;
   }
 </style>
