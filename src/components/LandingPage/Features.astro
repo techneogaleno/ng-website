@@ -5,11 +5,12 @@
   <div class="feature-container">
     <div class="wp-title">Funcionalidades</div>
     <div class="grid grid-features md:grid-cols-10">
+      <div class="ctr"></div>
       <div class="item col-span-1">
         <div class="container">
           <div class="grid grid-cols-4">
             <div class="col-span-1">
-              <img class="feature-icon" src="/webpage/wp-features-1.png" alt="Registro de pacientes"  />
+              <img class="feature-icon" src="/webpage/wp-features-1.png" alt="Registro de pacientes" />
             </div>
             <div class="title col-span-3">Registro de pacientes:</div>
             <div class="text col-span-4">
@@ -19,6 +20,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="item col-span-1">
         <div class="container">
           <div class="grid grid-cols-4">
@@ -215,6 +218,39 @@
   }
   .col-span-1 {
       grid-column: span 2 / span 2;
+  }
+
+  /* contenedor imagen */
+  div.grid > div:nth-child(1).col-span-1{
+    grid-row: 1 / 1;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  div.grid .title.col-span-3{
+    margin-top: 0 !important;
+  }
+  /* contenedor titulo */
+  div.grid > div:nth-child(2).col-span-3{    
+    grid-row: 1 / 1;
+    grid-column: 2 / 5;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    display: flex!important;
+    text-align: center;
+    justify-content: center;
+    align-items: center!important;
+    font-size: 1.3em!important;
+    margin-top: 0!important;
+  }
+
+  div.grid > .col-span-1 > img{
+    width: 100%;
   }
 
   .wp-features .item .title {
