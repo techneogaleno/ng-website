@@ -1,7 +1,7 @@
 ---
 import ScreenCarousel from '../ui/carousel/ScreenCarousel.astro';
 import BannerHome from '../ui/carousel/BannerHome.astro';
-
+import BtnDemoInternalModalMobileRequired from '../ui/BtnDemoInternalModalMobileRequired.astro'
 const appUser: string = import.meta.env.APP_URL;
 ---
 
@@ -16,12 +16,18 @@ const appUser: string = import.meta.env.APP_URL;
           la mejor atención a tus pacientes.
         </p>
         <div class="controls">
+          <!-- 
           <a
             href={ appUser + "/demo/booking" }
             class="btn white-btn"
           >
             Probar demo
           </a>
+         -->
+          <BtnDemoInternalModalMobileRequired 
+            link={ appUser + "/demo/booking" }
+            modalIdName='modal-4' 
+          />
           <a
             href={ appUser + "/users/sign_up" }
             class="mr-20 btn primary-btn"
@@ -92,7 +98,11 @@ animation-direction: alternate;
   background : #149CAA;
   height: 60rem;
   position: relative;
-  z-index: 99999;
+  z-index: 500;
+  /* 99999 */
+}
+a.btn.primary-btn{
+  font-size: 2.2rem!important;
 }
 
 .logo {
@@ -179,6 +189,23 @@ animation-direction: alternate;
   display: none;
 }
 
+a {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.controls{
+  display: flex;
+  gap: 1em;
+}
+.controls a{
+  margin: 0;
+}
 @media only screen and (min-width: 1758px) {
   .desktop {
     right: 0px;
@@ -247,7 +274,7 @@ animation-direction: alternate;
     background : #149CAA;
     height: 48rem;
     position: relative;
-    z-index: 99999;
+    z-index: 500;/* 99999 */
   }
 
   .desktop {
@@ -268,8 +295,8 @@ animation-direction: alternate;
   .bg-home {
     background : #149CAA;
     height: 48rem;
-    position: relative;
-    z-index: 99999;
+    position: relative;    
+    z-index: 500;/* 99999 */
   }
 
   .desktop {
@@ -358,6 +385,9 @@ animation-direction: alternate;
   .controls {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .home-screen {
@@ -388,7 +418,7 @@ animation-direction: alternate;
     background : #149CAA;
     height: 90rem;
     position: relative;
-    z-index: 99999;
+    z-index: 500;/* 99999 */
     overflow: hidden;
   }
   .block-1 {
