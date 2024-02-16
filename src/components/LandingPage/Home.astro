@@ -1,7 +1,7 @@
 ---
 import ScreenCarousel from '../ui/carousel/ScreenCarousel.astro';
 import BannerHome from '../ui/carousel/BannerHome.astro';
-import BtnDemoInternalModalMobileRequired from '../ui/BtnDemoInternalModalMobileRequired.astro'
+import BtnDinamic from '../ui/BtnDinamicModalCondition.astro'
 const appUser: string = import.meta.env.APP_URL;
 ---
 
@@ -16,24 +16,29 @@ const appUser: string = import.meta.env.APP_URL;
           la mejor atención a tus pacientes.
         </p>
         <div class="controls">
-          <!-- 
-          <a
-            href={ appUser + "/demo/booking" }
-            class="btn white-btn"
-          >
-            Probar demo
-          </a>
-         -->
-          <BtnDemoInternalModalMobileRequired 
+          <BtnDinamic 
             link={ appUser + "/demo/booking" }
+            dataName='data-demo-button-booking'
             modalIdName='modal-4' 
-          />
-          <a
+            className="size-50 white-bg primary-btn-big text-color-primary">
+            Probar demo
+          </BtnDinamic>
+          <!-- 
+            <a
             href={ appUser + "/users/sign_up" }
-            class="mr-20 btn primary-btn"
-          >
+            class="size-50 btn primary-btn"
+            >
             Crear cuenta ¡gratis!
           </a>
+         -->
+
+          <BtnDinamic 
+            link={ appUser + "/demo/sign_up" }
+            dataName='data-demo-button-create'
+            modalIdName='modal-5' 
+            className="size-50 primary-btn-big text-center">
+            Crear cuenta ¡gratis!
+          </BtnDinamic>
         </div>
         <div class="sm:inline-flex lg:hidden xl:hidden">
           <img class="home-screen" src="/webpage/ng-screen.png" alt="Un screenshot de la aplicacion de neogaleno" />
@@ -205,6 +210,14 @@ a {
 }
 .controls a{
   margin: 0;
+}
+
+.blocks.grid.grid-home{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 @media only screen and (min-width: 1758px) {
   .desktop {
@@ -388,6 +401,7 @@ a {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    padding: 0 3em;
   }
 
   .home-screen {
@@ -442,10 +456,11 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-
+  
   .controls {
     display: flex;
     justify-content: center;
+    padding: 0 4em;
   }
 
   .home-screen {
@@ -574,7 +589,8 @@ a {
 
   .controls {
     width: 100%;
-    justify-content: left;
+    justify-content: center;
+    gap: 1em;
   }
 
   .home-screen {
@@ -637,14 +653,13 @@ a {
 
 @media only screen and (max-width: 424px) {
   .bg-home {
-    padding-left: 1rem;
-    padding-right: 2rem;
     overflow: hidden;
     height: 90rem;
+    padding: 0 1em;
   }
 
   .block-1 {
-    width: 98%;
+    width: 100%;
     padding: 0;
   }
 
@@ -655,7 +670,7 @@ a {
 
   .content {
     font-size: 2.8rem;
-    width: 98%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
