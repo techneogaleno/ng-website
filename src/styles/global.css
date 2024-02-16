@@ -248,6 +248,13 @@ body {
   border: 1px solid #FFB26D;
   font-size: 1.5em!important;
   padding: 1.5rem 0;
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* orange */
@@ -274,4 +281,11 @@ body {
   border: 1px solid #FFB26D;
   font-size: 1.5em!important;
   padding: 1.5rem 0;
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
