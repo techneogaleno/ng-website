@@ -294,6 +294,15 @@ body {
   width: 100%;
 }
 
+.fw-400 {
+  font-weight: 400;
+}
+
+
+.f-size-1-25 {
+  font-size: 1.25em!important;
+}
+
 .size-90-plr5 {
   width: 90%;
   margin: 0 5%;
