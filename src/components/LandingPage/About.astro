@@ -1,4 +1,5 @@
 ---
+import BtnDinamic from '../ui/BtnDinamicModalCondition.astro';
 const appUser: string = import.meta.env.APP_URL;
 ---
 
@@ -74,13 +75,33 @@ const appUser: string = import.meta.env.APP_URL;
           </div>
         </div>
       </div>
-      <div class="controls">
-        <a href={ appUser + "/demo/booking" } class="mt-10 white-btn">
+      <div class="controls btns-acctions-container">
+        <!--
+          <a href={ appUser + "/demo/booking" } class="mt-10 white-btn">
+            Probar demo
+          </a> 
+          <a href={ appUser + "/users/sign_up" } class="primary-btn">
+            Crear cuenta ¡gratis!
+          </a>
+        -->
+       
+
+        <BtnDinamic 
+          link={ appUser + "/demo/booking" }
+          dataName='data-demo-button-booking2'
+          modalIdName='modal-6' 
+          className="btn-outline-1 size-50 text-center">
           Probar demo
-        </a>
-        <a href={ appUser + "/users/sign_up" } class="primary-btn">
+        </BtnDinamic> 
+
+        <BtnDinamic 
+          link={ appUser + "/demo/sign_up" }
+          dataName='data-demo-button-demo2'
+          modalIdName='modal-7' 
+          className="btn-prymary-2 size-50 text-center">
           Crear cuenta ¡gratis!
-        </a>
+        </BtnDinamic> 
+      
       </div>
     </div>
     <div class="video col-span-6 lg:col-span-6 md:col-span-10 sm:col-span-10 lg:order-last md:order-first sm:order-first">
@@ -93,6 +114,23 @@ const appUser: string = import.meta.env.APP_URL;
 </section>
 
 <style>
+.btns-acctions-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0 1em;
+    align-items: stretch;
+}
+
+.btns-acctions-container a {
+  min-width: 50%;
+  text-align: center;
+}
+
 .wp-about {
   padding: 10rem;
 }
@@ -213,6 +251,9 @@ ul {
 @media only screen and (max-width: 1758px) {
   .wp-about {
     padding-top: 10rem;
+  }
+  .container-grid-about{
+    height: auto;
   }
 }
 

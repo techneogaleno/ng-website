@@ -1,4 +1,5 @@
 ---
+import BtnDinamic from '../ui/BtnDinamicModalCondition.astro';
 const appUser: string = import.meta.env.APP_URL;
 ---
 
@@ -58,9 +59,19 @@ const appUser: string = import.meta.env.APP_URL;
 
             <p class="message">No requiere tarjeta de crédito</p>
             <div class="button">
-              <a href={ appUser + "/users/sign_up" } class="primary-btn">
+              <!-- 
+                <a href={ appUser + "/users/sign_up" } class="primary-btn">
                 Seleccionar plan
-              </a>
+                </a> 
+              -->
+
+              <BtnDinamic 
+                link={ appUser + "/demo/sign_up" }
+                dataName='data-demo-button-demop2'
+                modalIdName='modalp-7' 
+                className="btn-prymary-2 size-100 text-center size-90-plr5 f-size-1-25">
+                Seleccionar plan
+              </BtnDinamic> 
             </div>
           </div>
         </div>
@@ -586,6 +597,12 @@ margin: 0 auto;
 }
 
 @media (max-width: 600px) {
+  .wp-title{
+    padding: 1em;
+  }
+  .wp-pricing .pricing-container {
+    padding: 0rem 7rem 3rem 7rem;
+  }
   .item-pricing {
     padding-left: 10rem !important;
     padding-right: 10rem !important;
