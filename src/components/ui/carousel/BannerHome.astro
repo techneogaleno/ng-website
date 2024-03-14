@@ -1,8 +1,8 @@
-<section class='splide_banner' aria-label='Home carousel'>
-  <div class='splide_banner__track'>
-    <ul class='splide_banner__list'>
-      <li class='splide_banner__slide is-active is-visible'>
-        <div class='desktop desktop-1'></div>
+<section class="splide_banner" aria-label="Home carousel">
+  <div class="splide_banner__track">
+    <ul class="splide_banner__list">
+      <li class="splide_banner__slide is-active is-visible">
+        <div class="desktop desktop-1"></div>
       </li>
     </ul>
   </div>
@@ -15,16 +15,15 @@
     } else {
       ctrIndexActive = 1;
     }
-    if (document.querySelectorAll('div.desktop')[1]) {
+    if (document.querySelectorAll("div.desktop")[1]) {
       const classDesktop = document
-        .querySelectorAll('div.desktop')[1]
+        .querySelectorAll("div.desktop")[1]
         .classList.item(1);
       if (classDesktop) {
         document
-          .querySelectorAll('div.desktop')[1]
+          .querySelectorAll("div.desktop")[1]
           .classList.replace(classDesktop, `desktop-${ctrIndexActive}`);
       }
-      console.log({ classDesktop });
     }
   }
   setInterval(controlerBanner, 5000);
