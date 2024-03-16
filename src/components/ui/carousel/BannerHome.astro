@@ -1,61 +1,61 @@
-<div class="carousel js-flickity" data-flickity-options='{"pauseAutoPlayOnHover": false, "draggable":true,"fade":true,"wrapAround": true, "autoPlay": true, "prevNextButtons":false, "pageDots":false }'>
-  <div class="carousel-cell" style="--img: url(/webpage/ng-screen.png)">
-  </div>
-  <div class="carousel-cell" style="--img: url(/webpage/ng-screen-2.png)">
-  </div>
-  <div class="carousel-cell" style="--img: url(/webpage/ng-screen-3.png)">
-  </div>
+<div
+  class="carousel js-flickity"
+  data-flickity-options='{"pauseAutoPlayOnHover": false, "draggable":true,"fade":true,"wrapAround": true, "autoPlay": true, "prevNextButtons":false, "pageDots":false }'
+>
+  <div class="carousel-cell" style="--img: url(/webpage/ng-screen.png)"></div>
+  <div class="carousel-cell" style="--img: url(/webpage/ng-screen-2.png)"></div>
+  <div class="carousel-cell" style="--img: url(/webpage/ng-screen-3.png)"></div>
 </div>
 
 <style>
-  .gallery.js-flickity.flickity-enabled{
+  .gallery.js-flickity.flickity-enabled {
     width: 100%;
   }
-  .flickity-viewport{
+  .flickity-viewport {
     width: 750px;
     height: 100% !important;
   }
 
   .carousel {
     width: 100%;
-    height: 100%; 
-    }
- 
-  .carousel-cell{
-      height: 100%; 
-      width: 100%;
-      background-image: var(--img);
-      background-position: top left;
-      background-repeat: no-repeat;
-      background-size: 165%;     
+    height: 100%;
   }
-  
+
+  .carousel-cell {
+    height: 100%;
+    width: 100%;
+    background-image: var(--img);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 165%;
+  }
+
   .carousel-image {
-      min-width: 100px;
-      height: 200px;
+    min-width: 100px;
+    height: 200px;
   }
   .carousel-cell.is-selected {
     animation: fadeIn 0.7s ease-in;
   }
-  .carousel-cell:not(.is-selected){
-    animation: desvanece 1.7s ease-out;  
+  .carousel-cell:not(.is-selected) {
+    animation: desvanece 1.7s ease-out;
   }
   @keyframes fadeIn {
-    0%{
+    0% {
       opacity: 0;
     }
-    100%{
+    100% {
       opacity: 1;
     }
   }
   @keyframes desvanece {
-    0%{
+    0% {
       opacity: 1;
     }
-    50%{
+    50% {
       opacity: 0;
     }
-    100%{
+    100% {
       opacity: 0;
     }
   }
