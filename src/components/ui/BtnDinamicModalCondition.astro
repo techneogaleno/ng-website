@@ -1,7 +1,7 @@
 ---
-const { link, modalIdName, className = '', dataName='data-demo-button' } = Astro.props;
+const { link, modalIdName, idName, className = '', dataName='data-demo-button' } = Astro.props;
 ---
-<a {...{ [dataName]: true }} href={link} class={className}><slot /></a>
+<a {...{ [dataName]: true }} href={link} class={className} id={idName}><slot /></a>
 
 <div data-internal-modal id={modalIdName} class='container-modal'>
   <a href='#!' class='modal-overlay'></a>

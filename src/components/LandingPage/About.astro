@@ -1,18 +1,23 @@
 ---
-import BtnDinamic from '../ui/BtnDinamicModalCondition.astro';
+import BtnDinamic from "../ui/BtnDinamicModalCondition.astro";
 const appUser: string = import.meta.env.APP_URL;
 ---
 
 <section id="about" class="wp-about">
   <div class="wp-title">¿Por qué Neogaleno?</div>
   <div class="grid grid-cols-10 container-grid-about">
-    <div class="features col-span-4 lg:col-span-4 md:col-span-10 sm:col-span-10 sm:mt-20">
+    <div
+      class="features col-span-4 lg:col-span-4 md:col-span-10 sm:col-span-10 sm:mt-20"
+    >
       <div class="item">
         <div class="grid grid-cols-10">
           <div class="col-span-2">
             <div class="flex justify-center">
               <div class="cicle">
-                <img src="/webpage/wp-about-1.svg" alt="Icono de un relog: tu tiempo es importante" />
+                <img
+                  src="/webpage/wp-about-1.svg"
+                  alt="Icono de un relog: tu tiempo es importante"
+                />
               </div>
             </div>
             <div class="flex justify-center">
@@ -33,7 +38,10 @@ const appUser: string = import.meta.env.APP_URL;
           <div class="col-span-2">
             <div class="flex justify-center">
               <div class="cicle">
-                <img src="/webpage/wp-about-2.svg" alt="Icono de un cohete: producto construido para ti" />
+                <img
+                  src="/webpage/wp-about-2.svg"
+                  alt="Icono de un cohete: producto construido para ti"
+                />
               </div>
             </div>
             <div class="flex justify-center">
@@ -43,8 +51,8 @@ const appUser: string = import.meta.env.APP_URL;
           <div class="col-span-8">
             <div class="title">Producto construido para ti</div>
             <p class="text">
-              Creamos productos fáciles de utilizar, con diseños amigables y
-              con las funcionalidades que realmente necesitas
+              Creamos productos fáciles de utilizar, con diseños amigables y con
+              las funcionalidades que realmente necesitas
             </p>
           </div>
         </div>
@@ -54,7 +62,10 @@ const appUser: string = import.meta.env.APP_URL;
           <div class="col-span-2">
             <div class="flex justify-center">
               <div class="cicle">
-                <img src="/webpage/wp-about-3.svg" alt="Icono de una nube: software en la nube" />
+                <img
+                  src="/webpage/wp-about-3.svg"
+                  alt="Icono de una nube: software en la nube"
+                />
               </div>
             </div>
             <div class="flex justify-center">
@@ -76,35 +87,30 @@ const appUser: string = import.meta.env.APP_URL;
         </div>
       </div>
       <div class="controls btns-acctions-container">
-        <!--
-          <a href={ appUser + "/demo/booking" } class="mt-10 white-btn">
-            Probar demo
-          </a> 
-          <a href={ appUser + "/users/sign_up" } class="primary-btn">
-            Crear cuenta ¡gratis!
-          </a>
-        -->
-       
-
-        <BtnDinamic 
-          link={ appUser + "/demo/booking" }
-          dataName='data-demo-button-booking2'
-          modalIdName='modal-6' 
-          className="btn-outline-1 size-50 text-center">
+        <BtnDinamic
+          link={appUser + "/demo/booking"}
+          dataName="data-demo-button-booking2"
+          modalIdName="modal-6"
+          idName="btn-why-demo"
+          className="btn-outline-1 size-50 text-center"
+        >
           Probar demo
-        </BtnDinamic> 
+        </BtnDinamic>
 
-        <BtnDinamic 
-          link={ appUser + "/demo/sign_up" }
-          dataName='data-demo-button-demo2'
-          modalIdName='modal-7' 
-          className="btn-prymary-2 size-50 text-center">
+        <BtnDinamic
+          link={appUser + "/demo/sign_up"}
+          dataName="data-demo-button-demo2"
+          modalIdName="modal-7"
+          idName="btn-why-account"
+          className="btn-prymary-2 size-50 text-center"
+        >
           Crear cuenta ¡gratis!
-        </BtnDinamic> 
-      
+        </BtnDinamic>
       </div>
     </div>
-    <div class="video col-span-6 lg:col-span-6 md:col-span-10 sm:col-span-10 lg:order-last md:order-first sm:order-first">
+    <div
+      class="video col-span-6 lg:col-span-6 md:col-span-10 sm:col-span-10 lg:order-last md:order-first sm:order-first"
+    >
       <video class="video" style="border-radius: 2rem" controls>
         <source src="/webpage/about.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -114,7 +120,7 @@ const appUser: string = import.meta.env.APP_URL;
 </section>
 
 <style>
-.btns-acctions-container{
+  .btns-acctions-container {
     position: relative;
     display: flex;
     align-items: center;
@@ -124,447 +130,446 @@ const appUser: string = import.meta.env.APP_URL;
     flex-direction: row;
     padding: 0 1em;
     align-items: stretch;
-}
-
-.btns-acctions-container a {
-  min-width: 50%;
-  text-align: center;
-}
-
-.wp-about {
-  padding: 10rem;
-}
-.wp-about .wp-title{
-  margin-bottom: 2rem;
-}
-.container-grid-about{
-  height: 43em;
-}
-.item {
-  padding-right: 5rem;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 2rem;
-}
-
-.cicle {
-  @apply flex;
-  @apply justify-center;
-  @apply items-center;
-  background: #EFF7F8;
-  border-radius: 50%;
-  height: 4.6rem;
-  width: 4.6rem;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-}
-
-.cicle img {
-  height: 3.6rem;
-  width: 3.6rem;
-}
-
-.line-1 {
-  background: #009BA9;
-  height: 10rem;
-  width: .4rem;
-  margin-bottom: 2rem;
-}
-
-.line-2 {
-  background: #009BA9;
-  height: 10rem;
-  width: .4rem;
-  margin-bottom: 2rem;
-}
-
-.line-3 {
-  background: #009BA9;
-  height: 13rem;
-  width: .4rem;
-  margin-bottom: 4rem;
-}
-
-.item .title {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.6rem;
-  line-height: 2.9rem;
-  color: #003236;
-  margin-bottom: 2rem;
-}
-
-.item .text {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  color: #000000;
-  width: 70%;
-  line-height: 1.6;
-}
-
-.primary-btn {
-  font-size: 2rem !important;
-  font-weight: 400;
-  padding: 1.5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  margin-left: 1rem;
-  border: 1px solid #FFB26D;
-}
-
-.white-btn {
-  font-size: 2rem !important;
-  font-weight: 400;
-  padding: 1.5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  margin-left: 5rem;
-  border: 1px solid #FFB26D;
-}
-
-.video {
-  width: 100%;
-  height: 100%;
-}
-
-@media only screen and (min-width: 1758px) {
-  .wp-about {
-    padding-top: 15rem;
   }
 
-  .wp-title {
-    margin-bottom: 10rem;
-  }
-
-  .video {
-    width: 90%;
-    height: 96%;
-  }
-}
-
-@media only screen and (max-width: 1758px) {
-  .wp-about {
-    padding-top: 10rem;
-  }
-  .container-grid-about{
-    height: auto;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1020px) {
-  .item .title {
-    font-size: 3rem;
-  }
-
-  .wp-about {
-    padding-top: 10rem;
-  }
-
-  .item .text {
-    font-size: 2.2rem;
-  }
-
-  .line-1 {
-    height: 15rem;
-  }
-
-  .line-2 {
-    height: 15rem;
-  }
-
-  .line-3 {
-    height: 18rem;
-  }
-
-  .primary-btn {
-    font-size: 3rem !important;
-  }
-
-  .white-btn {
-    font-size: 3rem !important;
-  }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  .primary-btn {
-    font-size: 1.8rem !important;
-    font-weight: 400;
-    padding: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-left: 1rem;
-    border: 1px solid #FFB26D;
-  }
-
-  .white-btn {
-    font-size: 1.8rem !important;
-    font-weight: 400;
-    padding: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-left: 5rem;
-    border: 1px solid #FFB26D;
-  }
-}
-@media only screen and (min-width: 425px) and (max-width: 786px) {
-  .item .title {
-    font-size: 3rem;
-  }
-
-  .item .text {
-    font-size: 2.2rem;
-  }
-
-  .line-1 {
-    height: 15rem;
-  }
-
-  .line-2 {
-    height: 15rem;
-  }
-
-  .line-3 {
-    height: 18rem;
-  }
-
-  .primary-btn {
-    font-size: 2.5rem !important;
-  }
-
-  .white-btn {
-    font-size: 2.5rem !important;
-  }
-}
-
-@media only screen and (min-width: 425px) and (max-width: 661px) {
-  .item .title {
-    font-size: 2.8rem;
-  }
-
-  .item .text {
-    font-size: 1.8rem;
-  }
-
-  .line-1 {
-    height: 13rem;
-  }
-
-  .line-2 {
-    height: 13rem;
-  }
-
-  .line-3 {
-    height: 15rem;
-  }
-
-  .primary-btn {
-    font-size: 2.5rem !important;
-  }
-
-  .white-btn {
-    font-size: 2.5rem !important;
-  }
-}
-
-@media only screen and (max-width: 639px) {
-
-  .container-grid-about{
-    height: auto;
-  }
-  
-  .sm\:col-span-10 {
-    grid-column: span 10 / span 10;
-  }
-
-  .video {
-    order: -9999;
-  }
-
-  .features {
-    margin-top: 10rem;
-  }
-
-  .item-last {
-    margin-bottom: 5rem;
-  }
-
-  .primary-btn {
-    font-size: 3rem !important;
-    display: block;
-    margin: 0;
+  .btns-acctions-container a {
+    min-width: 50%;
     text-align: center;
-    padding: 2rem;
   }
 
-  .white-btn {
-    font-size: 3rem !important;
-    display: block;
-    margin: 0;
+  .wp-about {
+    padding: 10rem;
+  }
+  .wp-about .wp-title {
     margin-bottom: 2rem;
-    text-align: center;
-    padding: 2rem;
   }
-}
-
-@media only screen and (max-width: 606px) {
-  .item .text {
-    width: 100%;
+  .container-grid-about {
+    height: 43em;
+  }
+  .item {
+    padding-right: 5rem;
   }
 
-  .primary-btn {
-    font-size: 2.2rem !important;
+  ul {
+    list-style: disc;
+    padding-left: 2rem;
   }
 
-  .white-btn {
-    font-size: 2.2rem !important;
-  }
-}
-
-@media only screen and (max-width: 562px) {
-  .primary-btn {
-    font-size: 3rem !important;
-    display: block;
-    margin: 0;
-    text-align: center;
-    padding: 2rem;
+  .cicle {
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+    background: #eff7f8;
+    border-radius: 50%;
+    height: 4.6rem;
+    width: 4.6rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
   }
 
-  .white-btn {
-    font-size: 3rem !important;
-    display: block;
-    margin: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-    padding: 2rem;
-  }
-}
-@media only screen and (max-width: 540px) {
-  .primary-btn {
-    font-size: 3rem !important;
-    display: block;
-    margin: 0;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .white-btn {
-    font-size: 3rem !important;
-    display: block;
-    margin: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-    padding: 2rem;
-  }
-  .wp-about {
-    padding: 5rem;
-  }
-
-  .item .title {
-    font-size: 3rem;
-  }
-
-  .item .text {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 497px) {
-  .wp-about {
-    padding: 5rem;
-    padding-top: 15rem;
-  }
-
-  .item .title {
-    font-size: 3rem;
-  }
-
-  .item .text {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 460px) {
-  .wp-about {
-    padding: 3rem;
-    padding-top: 15rem;
-  }
-
-  .line-3 {
-    height: 20rem;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .item .title {
-    font-size: 2.8rem;
-  }
-
-  .item .text {
-    font-size: 1.9rem;
+  .cicle img {
+    height: 3.6rem;
+    width: 3.6rem;
   }
 
   .line-1 {
-    height: 14rem;
-  }
-
-  .line-2 {
-    height: 16rem;
-  }
-
-  .line-3 {
-    height: 19rem;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .wp-about {
-    padding: 1rem;
-    padding-top: 10rem;
-  }
-
-  .controls {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .item .title {
-    font-size: 2.8rem;
-  }
-
-  .item .text {
-    font-size: 1.8rem;
-  }
-
-  .line-1 {
+    background: #009ba9;
     height: 10rem;
+    width: 0.4rem;
+    margin-bottom: 2rem;
   }
 
   .line-2 {
-    height: 15rem;
+    background: #009ba9;
+    height: 10rem;
+    width: 0.4rem;
+    margin-bottom: 2rem;
   }
 
   .line-3 {
+    background: #009ba9;
     height: 13rem;
-  }
-}
-
-@media only screen and (max-width: 321px) {
-  .line-1 {
-    height: 18rem;
+    width: 0.4rem;
+    margin-bottom: 4rem;
   }
 
-  .line-2 {
-    height: 18rem;
+  .item .title {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 2.9rem;
+    color: #003236;
+    margin-bottom: 2rem;
   }
 
-  .line-3 {
-    height: 22rem;
+  .item .text {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #000000;
+    width: 70%;
+    line-height: 1.6;
   }
-}
+
+  .primary-btn {
+    font-size: 2rem !important;
+    font-weight: 400;
+    padding: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-left: 1rem;
+    border: 1px solid #ffb26d;
+  }
+
+  .white-btn {
+    font-size: 2rem !important;
+    font-weight: 400;
+    padding: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-left: 5rem;
+    border: 1px solid #ffb26d;
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media only screen and (min-width: 1758px) {
+    .wp-about {
+      padding-top: 15rem;
+    }
+
+    .wp-title {
+      margin-bottom: 10rem;
+    }
+
+    .video {
+      width: 90%;
+      height: 96%;
+    }
+  }
+
+  @media only screen and (max-width: 1758px) {
+    .wp-about {
+      padding-top: 10rem;
+    }
+    .container-grid-about {
+      height: auto;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1020px) {
+    .item .title {
+      font-size: 3rem;
+    }
+
+    .wp-about {
+      padding-top: 10rem;
+    }
+
+    .item .text {
+      font-size: 2.2rem;
+    }
+
+    .line-1 {
+      height: 15rem;
+    }
+
+    .line-2 {
+      height: 15rem;
+    }
+
+    .line-3 {
+      height: 18rem;
+    }
+
+    .primary-btn {
+      font-size: 3rem !important;
+    }
+
+    .white-btn {
+      font-size: 3rem !important;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .primary-btn {
+      font-size: 1.8rem !important;
+      font-weight: 400;
+      padding: 1.5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-left: 1rem;
+      border: 1px solid #ffb26d;
+    }
+
+    .white-btn {
+      font-size: 1.8rem !important;
+      font-weight: 400;
+      padding: 1.5rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-left: 5rem;
+      border: 1px solid #ffb26d;
+    }
+  }
+  @media only screen and (min-width: 425px) and (max-width: 786px) {
+    .item .title {
+      font-size: 3rem;
+    }
+
+    .item .text {
+      font-size: 2.2rem;
+    }
+
+    .line-1 {
+      height: 15rem;
+    }
+
+    .line-2 {
+      height: 15rem;
+    }
+
+    .line-3 {
+      height: 18rem;
+    }
+
+    .primary-btn {
+      font-size: 2.5rem !important;
+    }
+
+    .white-btn {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  @media only screen and (min-width: 425px) and (max-width: 661px) {
+    .item .title {
+      font-size: 2.8rem;
+    }
+
+    .item .text {
+      font-size: 1.8rem;
+    }
+
+    .line-1 {
+      height: 13rem;
+    }
+
+    .line-2 {
+      height: 13rem;
+    }
+
+    .line-3 {
+      height: 15rem;
+    }
+
+    .primary-btn {
+      font-size: 2.5rem !important;
+    }
+
+    .white-btn {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 639px) {
+    .container-grid-about {
+      height: auto;
+    }
+
+    .sm\:col-span-10 {
+      grid-column: span 10 / span 10;
+    }
+
+    .video {
+      order: -9999;
+    }
+
+    .features {
+      margin-top: 10rem;
+    }
+
+    .item-last {
+      margin-bottom: 5rem;
+    }
+
+    .primary-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .white-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 606px) {
+    .item .text {
+      width: 100%;
+    }
+
+    .primary-btn {
+      font-size: 2.2rem !important;
+    }
+
+    .white-btn {
+      font-size: 2.2rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 562px) {
+    .primary-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .white-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
+  @media only screen and (max-width: 540px) {
+    .primary-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .white-btn {
+      font-size: 3rem !important;
+      display: block;
+      margin: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: 2rem;
+    }
+    .wp-about {
+      padding: 5rem;
+    }
+
+    .item .title {
+      font-size: 3rem;
+    }
+
+    .item .text {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 497px) {
+    .wp-about {
+      padding: 5rem;
+      padding-top: 15rem;
+    }
+
+    .item .title {
+      font-size: 3rem;
+    }
+
+    .item .text {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+    .wp-about {
+      padding: 3rem;
+      padding-top: 15rem;
+    }
+
+    .line-3 {
+      height: 20rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .item .title {
+      font-size: 2.8rem;
+    }
+
+    .item .text {
+      font-size: 1.9rem;
+    }
+
+    .line-1 {
+      height: 14rem;
+    }
+
+    .line-2 {
+      height: 16rem;
+    }
+
+    .line-3 {
+      height: 19rem;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .wp-about {
+      padding: 1rem;
+      padding-top: 10rem;
+    }
+
+    .controls {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .item .title {
+      font-size: 2.8rem;
+    }
+
+    .item .text {
+      font-size: 1.8rem;
+    }
+
+    .line-1 {
+      height: 10rem;
+    }
+
+    .line-2 {
+      height: 15rem;
+    }
+
+    .line-3 {
+      height: 13rem;
+    }
+  }
+
+  @media only screen and (max-width: 321px) {
+    .line-1 {
+      height: 18rem;
+    }
+
+    .line-2 {
+      height: 18rem;
+    }
+
+    .line-3 {
+      height: 22rem;
+    }
+  }
 </style>
