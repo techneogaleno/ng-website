@@ -14,6 +14,9 @@ dependencies:
   astro:
     specifier: ^3.3.2
     version: 3.6.4
+  mixpanel-browser:
+    specifier: ^2.49.0
+    version: 2.49.0
   tailwindcss:
     specifier: ^3.3.3
     version: 3.4.1
@@ -2673,6 +2676,10 @@ packages:
   /minipass@7.0.4:
     resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
     engines: {node: '>=16 || 14 >=14.17'}
+    dev: false
+
+  /mixpanel-browser@2.49.0:
+    resolution: {integrity: sha512-RZJCO7XXuuHBAWG5fd9Mavz994M7v7W3Qiaq8NzmN631pa4BQ0vNZQtRFqKcCCOBn4xqOZbX2GkuC7ZkQoL4cQ==}
     dev: false
 
   /mkdirp-classic@0.5.3:
