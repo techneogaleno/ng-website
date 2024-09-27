@@ -246,6 +246,24 @@ const appUser: string = import.meta.env.APP_URL;
   const plans = {
     mx: {
       free: "$ 00.0 MXN",
+      standard: "$ 499 MXN*",
+      premium: "$ 749 MXN*",
+    },
+    co: {
+      free: "$ 0,00 COP",
+      standard: "$ 105.000,00 COP*",
+      premium: "$  158.000,00 COP*",
+    },
+    ve: {
+      free: "$0.00 USD",
+      standard: "$ 25 USD*",
+      premium: "$ 38 USD*",
+    },
+  };
+/*
+  const plans = {
+    mx: {
+      free: "$ 00.0 MXN",
       standard: "$ 1160 MXN*",
       premium: "$ 1950 MXN*",
     },
@@ -260,6 +278,7 @@ const appUser: string = import.meta.env.APP_URL;
       premium: "$ 99 USD*",
     },
   };
+  */
 
   async function getCountry(): Promise<string> {
     const env = process.env.NODE_ENV;

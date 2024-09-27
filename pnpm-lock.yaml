@@ -6,19 +6,19 @@ settings:
 
 dependencies:
   '@astrojs/tailwind':
-    specifier: ^5.0.2
+    specifier: ^5.1.0
     version: 5.1.0(astro@3.6.4)(tailwindcss@3.4.1)
   '@splidejs/splide':
     specifier: ^4.1.4
     version: 4.1.4
   astro:
-    specifier: ^3.3.2
+    specifier: ^3.6.4
     version: 3.6.4
   mixpanel-browser:
     specifier: ^2.49.0
     version: 2.49.0
   tailwindcss:
-    specifier: ^3.3.3
+    specifier: ^3.4.1
     version: 3.4.1
 
 packages:
@@ -1056,7 +1056,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.2
-      caniuse-lite: 1.0.30001580
+      caniuse-lite: 1.0.30001664
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -1137,7 +1137,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001580
+      caniuse-lite: 1.0.30001664
       electron-to-chromium: 1.4.647
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
@@ -1169,8 +1169,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: false
 
-  /caniuse-lite@1.0.30001580:
-    resolution: {integrity: sha512-mtj5ur2FFPZcCEpXFy8ADXbDACuNFXg6mxVDqp7tqooX6l3zwm+d8EPoeOSIFRDvHs8qu7/SLFOGniULkcH2iA==}
+  /caniuse-lite@1.0.30001664:
+    resolution: {integrity: sha512-AmE7k4dXiNKQipgn7a2xg558IRqPN3jMQY/rOsbxDhrd0tyChwbITBfiwtnqz8bi2M5mIWbxAYBvk7W7QBUS2g==}
     dev: false
 
   /ccount@2.0.1:
