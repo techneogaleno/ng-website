@@ -38,13 +38,17 @@ const appUser2: string = import.meta.env.APP_URL;
 <script>
   // Encuentra nuestro componente en la página.
   const button = document.querySelector('[data-login-button]');
-  const t = document.querySelector('[data-ml-modal]');
+  // const t = document.querySelector('[data-ml-modal]');
   if (button) {
     button.addEventListener('click', (evt) => {
-      const w = window?.visualViewport?.width;
+      const w = window?.screen?.width;
+      // window?.visualViewport?.width;
       //window.screen.width
-      console.log({ w });
       if (w && w < 1200) {
+        evt.preventDefault();
+        // evt.preventDefault();
+        return window.location.replace("https://mobile.neogaleno.com");
+        /* BK
         Object.defineProperty(evt, 'target', { writable: false, value: t });
         Object.defineProperty(evt, 'data-target', {
           writable: false,
@@ -56,6 +60,8 @@ const appUser2: string = import.meta.env.APP_URL;
         });
 
         button.href = '#modal-3';
+        */
+
         // button.click()
         // evt.preventDefault();
       }
