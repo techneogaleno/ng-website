@@ -30,6 +30,7 @@ const { link, modalIdName, idName, className = '', dataName='data-demo-button' }
   
   if (buttonAction && nameId) {
     buttonAction.addEventListener('click', (evt) => {
+      // window.screen
       if (window.visualViewport && window.visualViewport.width < 1200) {
         buttonAction.href = `#${nameId}`;
         Object.defineProperty(evt, 'target', { writable: false, value: targetModal });
