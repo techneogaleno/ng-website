@@ -11,7 +11,22 @@ const appUser: string = import.meta.env.APP_URL;
       <div
         class="block-1 xl:col-span-1 lg:col-span-1 md:col-span-2 sm:col-span-2"
       >
-        <img src="/webpage/wp-logo.svg" class="logo" alt="Logo de neogaleno" />
+        <section class="login-section">
+          <img
+            src="/webpage/wp-logo.svg"
+            class="logo"
+            alt="Logo de neogaleno"
+          />
+
+          <a
+            href="https://mobile.neogaleno.com"
+            id="btn-mobile-home-login"
+            class="size-50 primary-btn-big text-center"
+          >
+            Login
+        </a>
+        </section>
+
         <p class="title">Tu tiempo es para tus pacientes</p>
         <p class="content">
           En Neogaleno creemos que tu valioso tiempo debe ser para brindarle la
@@ -27,14 +42,6 @@ const appUser: string = import.meta.env.APP_URL;
           >
             Probar demo
           </BtnDinamic>
-          <!-- 
-            <a
-            href={ appUser + "/users/sign_up" }
-            class="size-50 btn primary-btn"
-            >
-            Crear cuenta ¡gratis!
-          </a>
-         -->
 
           <BtnDinamic
             link={appUser + "/users/sign_up"}
@@ -43,7 +50,7 @@ const appUser: string = import.meta.env.APP_URL;
             idName="btn-home-account"
             className="size-50 primary-btn-big text-center"
           >
-            Crear cuenta ¡gratis!
+            Crear cuenta ¡gratis!*
           </BtnDinamic>
         </div>
         <div class="sm:inline-flex lg:hidden xl:hidden">
@@ -85,6 +92,22 @@ const appUser: string = import.meta.env.APP_URL;
   </div>
 </section>
 <style>
+  .login-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2em;
+    align-items: center;
+  }
+  .login-section > img {
+    margin: 0;
+  }
+
+  .login-section > a {
+    height: 95%;
+  }
+
   .ai-anima {
     display: flex;
     flex-direction: row;
@@ -95,7 +118,7 @@ const appUser: string = import.meta.env.APP_URL;
     position: relative;
     padding-top: 7em;
   }
-  
+
   div.ai-anima > span.slogan-ai {
     color: #ffffff;
     font-family: "Rubik";
@@ -113,174 +136,172 @@ const appUser: string = import.meta.env.APP_URL;
     padding: 0.5em;
     filter: drop-shadow(5px 2px 5px rgba(0, 0, 0, 0.3));
     /*animation: floating 3s ease-in-out infinite;*/
-    
+
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-            animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
   }
 
-
-/**
+  /**
  * ----------------------------------------
  * animation vibrate-1
  * ----------------------------------------
  */
-@-webkit-keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+  @-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+      transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
   }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
+  @keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+      transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
   }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-@keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
 
-
-/**
+  /**
  * ----------------------------------------
  * animation heartbeat
  * ----------------------------------------
  */
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
   }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
   }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  10% {
-    -webkit-transform: scale(0.91);
-            transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  17% {
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  33% {
-    -webkit-transform: scale(0.87);
-            transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
 
-/**
+  /**
  * ----------------------------------------
  * animation tracking-in-expand
  * ----------------------------------------
  */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
+  @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  40% {
-    opacity: 0.6;
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
   @keyframes floating {
     0% {
@@ -292,21 +313,20 @@ const appUser: string = import.meta.env.APP_URL;
       transform: translatey(-10px);
     }
     100% {
-      
       filter: brightness(1);
       transform: translatey(0px);
     }
   }
-  
+
   @keyframes coloreado {
     0% {
-      filter:hue-rotate(0deg);
+      filter: hue-rotate(0deg);
     }
     50% {
-      filter:hue-rotate(90deg);
+      filter: hue-rotate(90deg);
     }
     100% {
-      filter:hue-rotate(360deg);
+      filter: hue-rotate(360deg);
     }
   }
 
@@ -459,6 +479,14 @@ const appUser: string = import.meta.env.APP_URL;
     flex-wrap: nowrap;
     flex-direction: row;
   }
+  
+  @media only screen and (min-width: 1024px) {
+    #btn-mobile-home-login{
+        display: none;
+    }
+  }
+
+
   @media only screen and (min-width: 1758px) {
     .desktop {
       right: 0px;
@@ -523,6 +551,7 @@ const appUser: string = import.meta.env.APP_URL;
   }
 
   @media only screen and (min-width: 1200px) and (max-width: 1281px) {
+    
     .bg-home {
       background: #149caa;
       height: 48rem;
@@ -1019,25 +1048,26 @@ const appUser: string = import.meta.env.APP_URL;
     }
   }
 
-/*
+  /*
  * Mobil styles
  */
-  
-@media screen and (max-width: 1100px) {
-  div.blocks.grid.grid-home p.title {
-    margin: 0px;
-    padding: 0px;
+
+  @media screen and (max-width: 1100px) {
+
+    div.blocks.grid.grid-home p.title {
+      margin: 0px;
+      padding: 0px;
+    }
+    div.ai-anima {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      position: absolute;
+      bottom: 2em;
+    }
+    body > section.wp-home > div.bg-home > div.ai-anima > span.slogan-ai {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
   }
-  div.ai-anima {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    position: absolute;
-    bottom: 2em;
-  }
-  body > section.wp-home > div.bg-home > div.ai-anima > span.slogan-ai {    
-    font-size: 1.5em;
-    font-weight: 400;
-  }
-}
 </style>
