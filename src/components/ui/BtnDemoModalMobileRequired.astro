@@ -31,6 +31,25 @@ const appUser2: string = import.meta.env.APP_URL;
   </div>
 </div>
 <script>
+
+
+function isIpad() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (userAgent && (userAgent.includes('iPad') || userAgent.includes('Macintosh')) ) {
+      return true;
+    }
+
+    // Verifica si el agente de usuario contiene "iPad" o "Macintosh" y no contiene "iPhone"
+    if (/\(Macintosh/.test(userAgent) && /\(iPad/.test(userAgent) && /iPad|Macintosh/.test(userAgent) && !/iPhone/.test(userAgent) && !navigator.maxTouchPoints) {
+        return true;
+    }
+
+    return false;
+}
+
+
+
   // Encuentra nuestro componente en la página.
   let button = document.querySelector('[data-demo-button]');
   const t = document.querySelector('[data-ml-modal]');
@@ -38,7 +57,9 @@ const appUser2: string = import.meta.env.APP_URL;
     button.addEventListener('click', (evt) => {
       // disponible  capacidad - window.screen.width
       // Visible en momento Actual- window.visualViewport.width
-      if (window.visualViewport.width < 1200) {
+
+
+      if (!isIpad() && window.visualViewport.width < 1200) {
         Object.defineProperty(evt, 'target', { writable: false, value: t });
         Object.defineProperty(evt, 'data-target', {
           writable: false,
@@ -48,10 +69,8 @@ const appUser2: string = import.meta.env.APP_URL;
           writable: false,
           value: '#modal-2',
         });
-        
+
         button.href = '#modal-2';
-        
-    
         // evt.preventDefault();
         // button.click()
       }
