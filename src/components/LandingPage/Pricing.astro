@@ -834,8 +834,12 @@ margin: 0 auto;
   }
   /* responsive new template */
   @media only screen and (max-width: 1025px) {
+    /*
+    min-height: 430px;
+    min-height: -webkit-fill-available;
+    */
     .padre-container .pricing-box {
-      min-height: 430px;
+      height: 430px;
     }
     article.planes-section {
       grid-template-columns: 1fr;
