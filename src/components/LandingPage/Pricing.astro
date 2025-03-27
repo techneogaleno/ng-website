@@ -13,7 +13,6 @@ const appUser: string = import.meta.env.APP_URL;
     <fieldset>
       <legend>Profesionales Independientes</legend>
       <article class="planes-section">
-
         <div class="item-pricing item col-span-1">
           <div class="pricing-box">
             <div class="header">
@@ -236,7 +235,7 @@ const appUser: string = import.meta.env.APP_URL;
           </div>
         </div>
       </article>
-      </fieldset>
+    </fieldset>
     <article class="plan-corporativo">
       <div class="item-pricing item col-span-1">
         <div class="pricing-box">
@@ -317,7 +316,7 @@ const appUser: string = import.meta.env.APP_URL;
             <!-- <div class="button">
               <a href="/" class="primary-btn">Seleccionar plan</a>
             </div> -->
-            
+
             <!-- 
             <BtnDinamic
               link="https://api.whatsapp.com/send?phone=525661393075&text=Hola me gustaría saber más sobre el plan corporativo"
@@ -330,12 +329,12 @@ const appUser: string = import.meta.env.APP_URL;
               Contáctanos
             </BtnDinamic>
             -->
-            
-            <a 
+
+            <a
               href="https://api.whatsapp.com/send?phone=525661393075&text=Hola me gustaría saber más sobre el plan corporativo"
               class="btn-prymary-2 size-100 text-center size-90-plr5 f-size-1-25"
-              target="_blank"
-              >Contáctanos</a>
+              target="_blank">Contáctanos</a
+            >
           </div>
         </div>
       </div>
@@ -426,7 +425,7 @@ const appUser: string = import.meta.env.APP_URL;
 <style>
   .popular {
     position: relative;
-  }	
+  }
   .lbl-more-popular {
     position: absolute;
     top: -10px;
@@ -438,7 +437,7 @@ const appUser: string = import.meta.env.APP_URL;
     border-radius: 0.5rem;
     text-align: center;
     font-weight: 400;
-  }	
+  }
   fieldset {
     border: 3px solid #ffb26d;
     border-radius: 25px;
@@ -835,33 +834,34 @@ margin: 0 auto;
   }
   /* responsive new template */
   @media only screen and (max-width: 1025px) {
-    article[data-astro-cid-hgww2bsm].planes-section {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 2em;
+    .padre-container .pricing-box {
+      min-height: 430px;
     }
-    
+    article.planes-section {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 2em;
+    }
+
     .padre-container {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1em;
       padding: 1em 2em;
     }
-    .plan-corporativo{
-
+    .plan-corporativo {
     }
     .items-box {
       height: -webkit-fill-available;
       justify-content: space-between;
     }
 
-    fieldset {    
+    fieldset {
       margin: 0;
       padding: 5px;
       border-radius: 10px;
     }
   }
-
 
   /* margin-top: 10rem; */
   @media (max-width: 1650px) {
