@@ -2,6 +2,7 @@
 import ScreenCarousel from "../ui/carousel/ScreenCarousel.astro";
 import BannerHome from "../ui/carousel/BannerHome.astro";
 import BtnDinamic from "../ui/BtnDinamicModalCondition.astro";
+import BtnYoutube from "../ui/BtnModalYoutube.astro";
 const appUser: string = import.meta.env.APP_URL;
 ---
 
@@ -24,7 +25,7 @@ const appUser: string = import.meta.env.APP_URL;
             class="size-50 primary-btn-big text-center"
           >
             Login
-        </a>
+          </a>
         </section>
 
         <p class="title">Tu tiempo es para tus pacientes</p>
@@ -69,10 +70,20 @@ const appUser: string = import.meta.env.APP_URL;
       </div>
     </div>
     <div class="ai-anima">
-      <span class="container-img-ai">
-        <img src="starts.svg" alt="logo-ai" />
+      <div class="ai-text">
+        <span class="container-img-ai">
+          <img src="starts.svg" alt="logo-ai" />
+        </span>
+        <span class="slogan-ai">
+          Empodérate con Inteligencia Artificial (AI)
+        </span>
+      </div>
+      <span class="video-preview">
+        <BtnYoutube
+          textValue="Ver video del asistente AI"
+          className="btn-preview-video-ai size-50 white-bg primary-btn-big text-color-primary text-center"
+        ></BtnYoutube>
       </span>
-      <span class="slogan-ai">Empodérate con Inteligencia Artificial (AI)</span>
     </div>
   </div>
 
@@ -90,8 +101,25 @@ const appUser: string = import.meta.env.APP_URL;
   <div class="certificate-sm">
     <div class="">Cumplimos con las NOMs de COFEPRIS</div>
   </div>
+  <div class="container-modal-youtube"></div>
 </section>
 <style>
+  .ai-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+  }
+  .video-preview {
+    max-width: 60%;
+    margin: 0;
+    padding: 0;
+  }
+
   .login-section {
     display: flex;
     flex-direction: row;
@@ -110,11 +138,10 @@ const appUser: string = import.meta.env.APP_URL;
 
   .ai-anima {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     padding: 2em 4em;
     gap: 1em;
-    align-items: center;
     position: relative;
     padding-top: 7em;
   }
@@ -480,13 +507,12 @@ const appUser: string = import.meta.env.APP_URL;
     flex-wrap: nowrap;
     flex-direction: row;
   }
-  
+
   @media only screen and (min-width: 1024px) {
-    #btn-mobile-home-login{
-        display: none;
+    #btn-mobile-home-login {
+      display: none;
     }
   }
-
 
   @media only screen and (min-width: 1758px) {
     .desktop {
@@ -552,7 +578,6 @@ const appUser: string = import.meta.env.APP_URL;
   }
 
   @media only screen and (min-width: 1200px) and (max-width: 1281px) {
-    
     .bg-home {
       background: #149caa;
       height: 48rem;
@@ -1054,7 +1079,6 @@ const appUser: string = import.meta.env.APP_URL;
  */
 
   @media screen and (max-width: 1100px) {
-
     div.blocks.grid.grid-home p.title {
       margin: 0px;
       padding: 0px;

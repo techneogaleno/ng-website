@@ -1,0 +1,177 @@
+---
+const { className = "", textValue = "" } = Astro.props;
+---
+
+<button data-button class={className}
+    ><img src="ai_play2.svg" alt="preview" height="25" width="25" />
+    {textValue}</button
+>
+<span id="modal-bg-yt" class="hidden"></span>
+<!-- Overlay y Modal -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+        <button class="modal-close" id="closeModalBtn">×</button>
+        <lite-youtube
+            videoplay="Mirar"
+            videotitle="Ai Functions"
+            videoid="-uaBr5Yvuyw"
+            short
+            autopause></lite-youtube>
+        <!-- https://www.youtube.com/shorts/-uaBr5Yvuyw -->
+    </div>
+</div>
+<script>
+    // Find our component DOM on the page.
+    const buttons = document.querySelectorAll("[data-button]");
+    const overlay = document.getElementById("modalOverlay");
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementById("closeModalBtn");
+
+    // Add event listeners when a button is clicked.
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            console.log("BTN click");
+
+            overlay?.classList.add("active");
+            setTimeout(() => {
+                modal?.classList.add("active");
+            }, 50); // Pequeño delay para asegurar animación
+        });
+    });
+
+    // Cerrar por click en X
+    closeBtn?.addEventListener("click", () => {
+        modal?.classList.remove("active");
+        setTimeout(() => {
+            overlay?.classList.remove("active");
+        }, 400); // Tiempo de la animación
+    });
+
+    // Cerrar por click fuera del modal
+    overlay?.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+            modal?.classList.remove("active");
+            setTimeout(() => {
+                overlay.classList.remove("active");
+            }, 400);
+        }
+    });
+    // Cerrar con tecla ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && overlay?.classList.contains("active")) {
+            modal?.classList.remove("active");
+            setTimeout(() => {
+                overlay.classList.remove("active");
+            }, 400);
+        }
+    });
+</script>
+<style>
+/*
+-  https://github.com/justinribeiro/lite-youtube
+  posterquality="maxresdefault"
+  lite-youtube {
+    --lite-youtube-aspect-ratio: 9 / 16;
+    --lite-youtube-aspect-ratio: 2 / 3;
+    --lite-youtube-frame-shadow-visible: no;
+    height: 80vh;
+  }
+*/
+    lite-youtube {
+        --lite-youtube-frame-shadow-visible: no;
+        --lite-youtube-aspect-ratio: 9 / 16;
+        height: 90vh;
+        width: 435px;
+    }
+
+    #modal-bg-yt {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 15000;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.5;
+        transition: all 5.3s;
+    }
+    .hidden {
+        display: none;
+    }
+
+    #modal {
+        position: relative;
+    }
+    .modal-overlay.active > .modal {
+        width: auto;
+    }
+    #closeModalBtn {
+        position: absolute;
+        color: #fff;
+        top: -15px;
+        right: -15px;
+        background-color: rgba(0, 0, 0, 1);
+        border-radius: 50%;
+        padding: 5px;
+        z-index: 15100;
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Overlay (fondo oscuro) */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.4s ease,
+            visibility 0.4s ease;
+    }
+
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Contenido del modal */
+    /*padding: 24px;*/
+    .modal {
+        background: white;
+        border-radius: 10px;
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        transform: scale(0.95);
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .modal.active {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    /* Botón de cerrar (X) */
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #888;
+    }
+
+    .modal-close:hover {
+        color: #333;
+    }
+</style>

@@ -35,6 +35,10 @@ const mixpanelToken: string = import.meta.env.MIXPANEL_TOKEN;
 			href="https://unpkg.com/flickity@2/dist/flickity.min.css"
 		/>
 		<!-- JavaScript -->
+		<script
+			type="module"
+			src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
+		></script>
 		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
 		></script>
 		<meta name="viewport" content="width=device-width" />
@@ -52,7 +56,7 @@ const mixpanelToken: string = import.meta.env.MIXPANEL_TOKEN;
 		<Contact />
 		<Footer />
 		<div id="mixpanel-token" data-mixpanel-token={mixpanelToken}></div>
-		<script src="../scripts/mixpanel.js" />
+		<script src="../scripts/mixpanel.js"></script>
 		<!-- Start of HubSpot Embed Code -->
 		<script
 			type="text/javascript"
