@@ -81,7 +81,7 @@ const appUser: string = import.meta.env.APP_URL;
       <span class="video-preview">
         <BtnYoutube
           textValue="Ver video del asistente AI"
-          className="btn-preview-video-ai size-50 white-bg primary-btn-big text-color-primary text-center"
+          className="btn-preview-video-ai white-bg primary-btn-big text-color-primary text-center"
         ></BtnYoutube>
       </span>
     </div>
@@ -1079,6 +1079,13 @@ const appUser: string = import.meta.env.APP_URL;
  */
 
   @media screen and (max-width: 1100px) {
+
+    .video-preview,
+    .btn-preview-video-ai {
+      width: 100%;
+      max-width: 100%;
+    }
+
     div.blocks.grid.grid-home p.title {
       margin: 0px;
       padding: 0px;
