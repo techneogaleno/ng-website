@@ -12,7 +12,6 @@ mixpanel.init(token, {
 
 window.onload = () => {
   const btnDemo = document.getElementById('btn-demo');
-  console.log({ btnDemo }, document.getElementById('btn-demo'));
   btnDemo.onclick = function () {
     mixpanel.track('Navbar - Probar demo');
   };
@@ -36,9 +35,7 @@ window.onload = () => {
   };
 
   const btnWhyAccount = document.getElementById('btn-why-account');
-  console.log({ btnWhyAccount });
   btnWhyAccount.onclick = function () {
-    console.log('btn click');
     mixpanel.track('¿Por qué Neogaleno? - Crea cuenta gratis');
   };
 

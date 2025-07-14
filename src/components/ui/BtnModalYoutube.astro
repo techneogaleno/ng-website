@@ -31,8 +31,6 @@ const { className = "", textValue = "" } = Astro.props;
   // Add event listeners when a button is clicked.
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      console.log("BTN click");
-
       overlay?.classList.add("active");
       setTimeout(() => {
         modal?.classList.add("active");
