@@ -127,20 +127,15 @@ const appUser: string = import.meta.env.APP_URL;
 
     async function getMessageNorm() {
       const countryValue = await getCountryV2();
-      console.log("getMessageNorm country.value:", countryValue);
       return countryValue === "mx"
         ? "Cumplimos con las NOMs de COFEPRIS"
         : "Nuestro Asistente AI también funciona por WhatsApp";
     }
     getMessageNorm().then((m) => {
-      
       const elements: any = document.querySelectorAll(".messageNorm");
-      elements.forEach((e: any, i:any) => {
-        console.log({ e,i,m }, elements[i]?.innerHTML);
+      elements.forEach((e: any, i: any) => {
         elements[i].innerHTML = m;
       });
-
-      console.log({ elements, m });
     });
   </script>
 </section>
