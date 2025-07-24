@@ -43,7 +43,13 @@ const mixpanelToken: string = import.meta.env.MIXPANEL_TOKEN;
     ></script>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Neogaleno</title>
+    <meta property="og:title" content="Neogaleno mejor Software Médico con IA | Software de gestión médica con IA para optimizar la administración de consultorios">
+    <meta property="og:description" content="Software de gestión médica con IA para optimizar la administración de consultorios, facilitar el acceso móvil a historiales y garantizar la seguridad de los datos del paciente.">
+    <meta property="og:image" content="https://www.neogaleno.com/web.jpg">
+    <meta property="og:url" content="https://www.neogaleno.com">
+    <meta property="og:type" content="website">
+    <title>Neogaleno | Software de gestión médica con IA para optimizar la administración de consultorios, Clínicas y Profesionales Independientes de la Salud</title>
+    <meta name="description" content="Optimice su consultorio con Neogaleno plataforma médica de vanguardia. Gestión de pacientes, resúmenes con IA, acceso móvil y seguridad de alto nivel cumpliendo con mas altos estandares y normativas. ¡Pruebe la demo!">
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -80,6 +86,31 @@ const mixpanelToken: string = import.meta.env.MIXPANEL_TOKEN;
       SameSite="None;"
       Secure></script>
     <!-- End of HubSpot Embed Code -->
+    <!-- JSON-LD for SEO -->
+     <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Neogaleno",
+        "applicationCategory": "MedicalApplication",
+        "operatingSystem": "Web-based, iOS, Android",
+        "description": "Software de gestión médica con IA para optimizar la administración de consultorios, facilitar el acceso móvil a historiales y garantizar la seguridad de los datos del paciente.",
+        "offers": {
+          "@type": "Offer",
+          "price": "Consultar",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "85"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Neogaleno"
+        }
+      }
+      </script>
   </body>
 </html>
 
