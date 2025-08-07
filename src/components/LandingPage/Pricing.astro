@@ -3,6 +3,21 @@ import BtnDinamic from "../ui/BtnDinamicModalCondition.astro";
 const appUser: string = import.meta.env.APP_URL;
 ---
 
+<script is:inline>
+  function selectPLan(plan, element) {
+    // Leer el valor de appUser desde el data attribute
+    const { appUser } = element.dataset;
+
+    if (window?.location?.hostname && document?.cookie) {
+      const domain = window.location.hostname;
+      document.cookie = `neogaleno-plan=${plan}; domain=.${domain}; path=/; SameSite=Lax`;
+    }
+
+    // redirect to app
+    window.location.href = appUser + "/users/sign_up";
+  }
+</script>
+
 <div id="pricing" class="wp-pricing">
   <div class="wp-title">
     Consulta los precios y elige el plan que mejor se adapte a tu práctica
@@ -58,13 +73,12 @@ const appUser: string = import.meta.env.APP_URL;
                 </div>
               </div>
 
-              <p class="message">No requiere tarjeta de crédito</p>
               <div class="button">
                 <!-- 
-            <a href={ appUser + "/users/sign_up" } class="primary-btn">
-            Seleccionar plan
-            </a> 
-          -->
+                  <a href={ appUser + "/users/sign_up" } class="primary-btn">
+                  Seleccionar plan
+                  </a> 
+                  -->
 
                 <BtnDinamic
                   link={appUser + "/users/sign_up"}
@@ -76,6 +90,7 @@ const appUser: string = import.meta.env.APP_URL;
                   Seleccionar plan
                 </BtnDinamic>
               </div>
+              <p class="message">No requiere tarjeta de crédito</p>
             </div>
           </div>
         </div>
@@ -138,9 +153,15 @@ const appUser: string = import.meta.env.APP_URL;
                   </div>
                 </div>
               </div>
-              <!-- <div class="button">
-          <a href="/" class="primary-btn">Seleccionar plan</a>
-        </div> -->
+              <div class="button container-plans-btn">
+                <button
+                  data-app-user={appUser}
+                  onclick="selectPLan('Estándar',this)"
+                  class="btns-target-plan btn-prymary-2 size-100 text-center size-90-plr5 f-size-1-25"
+                  >Seleccionar plan</button
+                >
+              </div>
+              <!-- -->
               <img
                 class="pricing-certificates"
                 src="/webpage/price-logos.svg"
@@ -221,6 +242,14 @@ const appUser: string = import.meta.env.APP_URL;
                     Almacenamiento de estudios ilimitados
                   </div>
                 </div>
+              </div>
+              <div class="button container-plans-btn">
+                <button
+                  data-app-user={appUser}
+                  onclick="selectPLan('Premium',this)"
+                  class="btns-target-plan btn-prymary-2 size-100 text-center size-90-plr5 f-size-1-25"
+                  >Seleccionar plan</button
+                >
               </div>
               <img
                 class="pricing-certificates"
@@ -423,6 +452,9 @@ const appUser: string = import.meta.env.APP_URL;
 </script>
 
 <style>
+  .container-plans-btn {
+    padding-bottom: 3rem;
+  }
   .popular {
     position: relative;
   }
@@ -527,6 +559,7 @@ const appUser: string = import.meta.env.APP_URL;
     padding-bottom: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    min-height: 281px;
   }
   .wp-title {
     margin: 0;
@@ -830,8 +863,6 @@ margin: 0 auto;
     }
   }
 
-
-  
   @media only screen and (min-width: 1100px) {
     .padre-container .pricing-box {
       min-height: 500px;
