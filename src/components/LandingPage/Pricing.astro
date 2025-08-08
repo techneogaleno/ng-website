@@ -9,8 +9,8 @@ const appUser: string = import.meta.env.APP_URL;
     const { appUser } = element.dataset;
 
     if (window?.location?.hostname && document?.cookie) {
-      const domain = window.location.hostname;
-      document.cookie = `neogaleno-plan=${plan}; domain=.${domain}; path=/; SameSite=Lax`;
+      // const domain = window.location.hostname;
+      document.cookie = `neogaleno-plan=${plan}; domain=.neogaleno.com; path=/; SameSite=Lax`;
     }
 
     // redirect to app
