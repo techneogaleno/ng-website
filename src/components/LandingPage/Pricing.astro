@@ -471,10 +471,11 @@ const appUser: string = import.meta.env.APP_URL;
     align-items: center;
     align-content: center;
   }
-
+  /*
   div.button {
     padding-bottom: 1em;
   }
+  */
   #pricing > section > article.plan-corporativo > div > div > div.body {
     height: 468px;
     display: flex;
@@ -711,6 +712,7 @@ margin-bottom: .5rem;
     font-size: 1.8rem;
     line-height: 2rem;
     color: #003236;
+    gap: 0.7em;
   }
 
   /* 
@@ -753,11 +755,11 @@ margin: 0 auto;
     flex-wrap: nowrap;
     flex-direction: row;
   }
+/*  margin-top: 1rem;*/
   .padre-container .pricing-box .button,
   .wp-pricing .pricing-box .button {
     @apply flex;
     @apply justify-center;
-    margin-top: 1rem;
   }
 
   .padre-container .pricing-box .primary-btn,
@@ -841,10 +843,10 @@ margin: 0 auto;
       flex-direction: row;
     }
 
+    /* margin-top: 1rem; */
     .wp-pricing .pricing-box .button {
       @apply flex;
       @apply justify-center;
-      margin-top: 1rem;
     }
 
     .wp-pricing .pricing-box .primary-btn {
@@ -893,6 +895,7 @@ margin: 0 auto;
   @media only screen and (min-width: 1100px) {
     .padre-container .pricing-box {
       min-height: 500px;
+      height: 545px;
     }
   }
 
