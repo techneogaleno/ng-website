@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmación de Cancelación - Neogaleno</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'neo-teal': '#009ba9', // Tu color personalizado
+              'neo-orange': '#F9AB85',
+            },
+            fontFamily: {
+              rubik: ['Rubik', 'sans-serif'], // Tu fuente personalizada
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Aplicando la fuente base como pediste */
+      body {
+        font-family: 'Rubik', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300; /* Peso ligero por defecto según tu CSS */
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-cyan-50 min-h-screen flex items-center justify-center p-4">
+    <div
+      class="bg-white w-full max-w-5xl shadow-2xl rounded-[32px] overflow-hidden flex flex-col md:flex-row min-h-[500px]"
+    >
+      <div
+        class="bg-neo-teal w-full md:w-5/12 flex items-center justify-center p-12 relative"
+      >
+        <img
+          src="https://app.neogaleno.com/logo.svg"
+          alt="Neogaleno Logo"
+          class="w-48 md:w-56 object-contain"
+        />
+      </div>
+
+      <div
+        class="w-full md:w-7/12 bg-white p-10 md:p-16 flex flex-col justify-center"
+      >
+        <div class="max-w-lg">
+          <h1
+            class="text-[#003846] font-bold text-2xl md:text-3xl mb-2 tracking-tight"
+          >
+            Confirmación de Cancelación
+          </h1>
+
+          <h2 class="text-[#009ba9] font-medium text-xl mb-6">
+            Lamentamos verte partir.
+          </h2>
+
+          <p class="text-slate-600 text-base leading-relaxed font-light">
+            Tu suscripción ha sido cancelada exitosamente. A partir de ahora, ya
+            no recibirás nuestro boletín semanal en tu bandeja de entrada.
+            <br class="hidden md:block" />
+            Estaremos aquí esperándote cuando decidas regresar.
+          </p>
+          <div
+            class="flex flex-row flex-nowrap gap-8 justify-between items-center mt-4"
+          >
+            <!-- class="min-w-[200px] bg-neo-teal/80 rounded-[7px] text-[#fff] p-2 flex justify-center cursor-pointer hover:bg-neo-teal" -->
+            <a
+              class="hover:underline text-[#F9AB85] hover:text-[#009ba9] hover:underline-offset-[3px]"
+              href="https://blog.neogaleno.com"
+              >Ir al Blog</a
+            >
+            <span class="text-slate-600">|</span>
+
+            <a
+              href="https://www.neogaleno.com"
+              class="hover:underline text-[#F9AB85] hover:text-[#009ba9] hover:underline-offset-[3px]"
+              >Ir al Expediente Médico</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
